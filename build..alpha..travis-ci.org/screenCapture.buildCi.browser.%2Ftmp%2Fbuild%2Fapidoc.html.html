@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://www.parse.com"
-
-    >parse (v1.9.2)</a>
+    <a href="https://www.parse.com">parse (v1.9.2)</a>
 </h1>
 <h4>The Parse JavaScript SDK</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.parse">module parse</a><ol>
 
@@ -3076,31 +3069,31 @@
   (0, _classCallCheck3.default)(this, ParseACL);
 
   this.permissionsById = {};
-  if (arg1 &#x26;&#x26; (typeof arg1 === &#x27;undefined&#x27; ? &#x27;undefined&#x27; : (0, _typeof3.default)(arg1)) === &#x27;object&#x27;) {
+  if (arg1 &amp;&amp; (typeof arg1 === 'undefined' ? 'undefined' : (0, _typeof3.default)(arg1)) === 'object') {
     if (arg1 instanceof _ParseUser2.default) {
       this.setReadAccess(arg1, true);
       this.setWriteAccess(arg1, true);
     } else {
       for (var userId in arg1) {
         var accessList = arg1[userId];
-        if (typeof userId !== &#x27;string&#x27;) {
-          throw new TypeError(&#x27;Tried to create an ACL with an invalid user id.&#x27;);
+        if (typeof userId !== 'string') {
+          throw new TypeError('Tried to create an ACL with an invalid user id.');
         }
         this.permissionsById[userId] = {};
         for (var permission in accessList) {
           var allowed = accessList[permission];
-          if (permission !== &#x27;read&#x27; &#x26;&#x26; permission !== &#x27;write&#x27;) {
-            throw new TypeError(&#x27;Tried to create an ACL with an invalid permission type.&#x27;);
+          if (permission !== 'read' &amp;&amp; permission !== 'write') {
+            throw new TypeError('Tried to create an ACL with an invalid permission type.');
           }
-          if (typeof allowed !== &#x27;boolean&#x27;) {
-            throw new TypeError(&#x27;Tried to create an ACL with an invalid permission value.&#x27;);
+          if (typeof allowed !== 'boolean') {
+            throw new TypeError('Tried to create an ACL with an invalid permission value.');
           }
           this.permissionsById[userId][permission] = allowed;
         }
       }
     }
-  } else if (typeof arg1 === &#x27;function&#x27;) {
-    throw new TypeError(&#x27;ParseACL constructed with a function. Did you forget ()?&#x27;);
+  } else if (typeof arg1 === 'function') {
+    throw new TypeError('ParseACL constructed with a function. Did you forget ()?');
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -3116,16 +3109,16 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function track(name, dimensions, options) {
-  name = name || &#x27;&#x27;;
-  name = name.replace(/^\s*/, &#x27;&#x27;);
-  name = name.replace(/\s*$/, &#x27;&#x27;);
+  name = name || '';
+  name = name.replace(/^\s*/, '');
+  name = name.replace(/\s*$/, '');
   if (name.length === 0) {
-    throw new TypeError(&#x27;A name for the custom event must be provided&#x27;);
+    throw new TypeError('A name for the custom event must be provided');
   }
 
   for (var key in dimensions) {
-    if (typeof key !== &#x27;string&#x27; || typeof dimensions[key] !== &#x27;string&#x27;) {
-      throw new TypeError(&#x27;track() dimensions expects keys and values of type &#x22;string&#x22;.&#x27;);
+    if (typeof key !== 'string' || typeof dimensions[key] !== 'string') {
+      throw new TypeError('track() dimensions expects keys and values of type "string".');
     }
   }
 
@@ -3147,8 +3140,8 @@
     <li>description and source-code<pre class="apidocCodePre">function run(name, data, options) {
   options = options || {};
 
-  if (typeof name !== &#x27;string&#x27; || name.length === 0) {
-    throw new TypeError(&#x27;Cloud function name must be a string.&#x27;);
+  if (typeof name !== 'string' || name.length === 0) {
+    throw new TypeError('Cloud function name must be a string.');
   }
 
   var requestOptions = {};
@@ -3195,7 +3188,7 @@
   if (config.hasOwnProperty(key)) {
     return config[key];
   }
-  throw new Error(&#x27;Configuration key not found: &#x27; + key);
+  throw new Error('Configuration key not found: ' + key);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3210,7 +3203,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">CoreManager.getAnalyticsController = function () {
-  return config[&#x27;AnalyticsController&#x27;];
+  return config['AnalyticsController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3225,7 +3218,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">CoreManager.getCloudController = function () {
-  return config[&#x27;CloudController&#x27;];
+  return config['CloudController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3240,7 +3233,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">CoreManager.getConfigController = function () {
-  return config[&#x27;ConfigController&#x27;];
+  return config['ConfigController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3255,7 +3248,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">CoreManager.getFileController = function () {
-  return config[&#x27;FileController&#x27;];
+  return config['FileController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3270,7 +3263,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">CoreManager.getHooksController = function () {
-  return config[&#x27;HooksController&#x27;];
+  return config['HooksController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3285,7 +3278,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">CoreManager.getInstallationController = function () {
-  return config[&#x27;InstallationController&#x27;];
+  return config['InstallationController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3300,7 +3293,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">CoreManager.getLiveQueryController = function () {
-  return config[&#x27;LiveQueryController&#x27;];
+  return config['LiveQueryController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3315,7 +3308,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">CoreManager.getObjectController = function () {
-  return config[&#x27;ObjectController&#x27;];
+  return config['ObjectController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3330,7 +3323,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">CoreManager.getObjectStateController = function () {
-  return config[&#x27;ObjectStateController&#x27;];
+  return config['ObjectStateController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3345,7 +3338,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">CoreManager.getPushController = function () {
-  return config[&#x27;PushController&#x27;];
+  return config['PushController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3360,7 +3353,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">CoreManager.getQueryController = function () {
-  return config[&#x27;QueryController&#x27;];
+  return config['QueryController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3375,7 +3368,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">CoreManager.getRESTController = function () {
-  return config[&#x27;RESTController&#x27;];
+  return config['RESTController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3390,7 +3383,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">CoreManager.getSessionController = function () {
-  return config[&#x27;SessionController&#x27;];
+  return config['SessionController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3405,7 +3398,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">CoreManager.getStorageController = function () {
-  return config[&#x27;StorageController&#x27;];
+  return config['StorageController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3420,7 +3413,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">CoreManager.getUserController = function () {
-  return config[&#x27;UserController&#x27;];
+  return config['UserController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3450,8 +3443,8 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">CoreManager.setAnalyticsController = function (controller) {
-  requireMethods(&#x27;AnalyticsController&#x27;, [&#x27;track&#x27;], controller);
-  config[&#x27;AnalyticsController&#x27;] = controller;
+  requireMethods('AnalyticsController', ['track'], controller);
+  config['AnalyticsController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3466,8 +3459,8 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">CoreManager.setCloudController = function (controller) {
-  requireMethods(&#x27;CloudController&#x27;, [&#x27;run&#x27;], controller);
-  config[&#x27;CloudController&#x27;] = controller;
+  requireMethods('CloudController', ['run'], controller);
+  config['CloudController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3482,8 +3475,8 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">CoreManager.setConfigController = function (controller) {
-  requireMethods(&#x27;ConfigController&#x27;, [&#x27;current&#x27;, &#x27;get&#x27;], controller);
-  config[&#x27;ConfigController&#x27;] = controller;
+  requireMethods('ConfigController', ['current', 'get'], controller);
+  config['ConfigController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3498,8 +3491,8 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">CoreManager.setFileController = function (controller) {
-  requireMethods(&#x27;FileController&#x27;, [&#x27;saveFile&#x27;, &#x27;saveBase64&#x27;], controller);
-  config[&#x27;FileController&#x27;] = controller;
+  requireMethods('FileController', ['saveFile', 'saveBase64'], controller);
+  config['FileController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3514,8 +3507,8 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">CoreManager.setHooksController = function (controller) {
-  requireMethods(&#x27;HooksController&#x27;, [&#x27;create&#x27;, &#x27;get&#x27;, &#x27;update&#x27;, &#x27;remove&#x27;], controller);
-  config[&#x27;HooksController&#x27;] = controller;
+  requireMethods('HooksController', ['create', 'get', 'update', 'remove'], controller);
+  config['HooksController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3530,8 +3523,8 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">CoreManager.setInstallationController = function (controller) {
-  requireMethods(&#x27;InstallationController&#x27;, [&#x27;currentInstallationId&#x27;], controller);
-  config[&#x27;InstallationController&#x27;] = controller;
+  requireMethods('InstallationController', ['currentInstallationId'], controller);
+  config['InstallationController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3546,8 +3539,8 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">CoreManager.setLiveQueryController = function (controller) {
-  requireMethods(&#x27;LiveQueryController&#x27;, [&#x27;subscribe&#x27;, &#x27;unsubscribe&#x27;, &#x27;open&#x27;, &#x27;close&#x27;], controller);
-  config[&#x27;LiveQueryController&#x27;] = controller;
+  requireMethods('LiveQueryController', ['subscribe', 'unsubscribe', 'open', 'close'], controller);
+  config['LiveQueryController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3562,8 +3555,8 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">CoreManager.setObjectController = function (controller) {
-  requireMethods(&#x27;ObjectController&#x27;, [&#x27;save&#x27;, &#x27;fetch&#x27;, &#x27;destroy&#x27;], controller);
-  config[&#x27;ObjectController&#x27;] = controller;
+  requireMethods('ObjectController', ['save', 'fetch', 'destroy'], controller);
+  config['ObjectController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3578,11 +3571,11 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">CoreManager.setObjectStateController = function (controller) {
-  requireMethods(&#x27;ObjectStateController&#x27;, [&#x27;getState&#x27;, &#x27;initializeState&#x27;, &#x27;removeState&#x27;, &#x27;getServerData&#x27;, &#x27;setServerData&#x27;, &#x27;getPendingOps
-&#x27;, &#x27;setPendingOp&#x27;, &#x27;pushPendingState&#x27;, &#x27;popPendingState&#x27;, &#x27;mergeFirstPendingState&#x27;, &#x27;getObjectCache&#x27;, &#x27;estimateAttribute&#x27;, &#x27;estimateAttributes
-&#x27;, &#x27;commitServerChanges&#x27;, &#x27;enqueueTask&#x27;, &#x27;clearAllState&#x27;], controller);
+  requireMethods('ObjectStateController', ['getState', 'initializeState', 'removeState', 'getServerData', 'setServerData', 'getPendingOps
+', 'setPendingOp', 'pushPendingState', 'popPendingState', 'mergeFirstPendingState', 'getObjectCache', 'estimateAttribute', 'estimateAttributes
+', 'commitServerChanges', 'enqueueTask', 'clearAllState'], controller);
 
-  config[&#x27;ObjectStateController&#x27;] = controller;
+  config['ObjectStateController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3597,8 +3590,8 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">CoreManager.setPushController = function (controller) {
-  requireMethods(&#x27;PushController&#x27;, [&#x27;send&#x27;], controller);
-  config[&#x27;PushController&#x27;] = controller;
+  requireMethods('PushController', ['send'], controller);
+  config['PushController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3613,8 +3606,8 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">CoreManager.setQueryController = function (controller) {
-  requireMethods(&#x27;QueryController&#x27;, [&#x27;find&#x27;], controller);
-  config[&#x27;QueryController&#x27;] = controller;
+  requireMethods('QueryController', ['find'], controller);
+  config['QueryController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3629,8 +3622,8 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">CoreManager.setRESTController = function (controller) {
-  requireMethods(&#x27;RESTController&#x27;, [&#x27;request&#x27;, &#x27;ajax&#x27;], controller);
-  config[&#x27;RESTController&#x27;] = controller;
+  requireMethods('RESTController', ['request', 'ajax'], controller);
+  config['RESTController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3645,8 +3638,8 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">CoreManager.setSessionController = function (controller) {
-  requireMethods(&#x27;SessionController&#x27;, [&#x27;getSession&#x27;], controller);
-  config[&#x27;SessionController&#x27;] = controller;
+  requireMethods('SessionController', ['getSession'], controller);
+  config['SessionController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3662,11 +3655,11 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">CoreManager.setStorageController = function (controller) {
   if (controller.async) {
-    requireMethods(&#x27;An async StorageController&#x27;, [&#x27;getItemAsync&#x27;, &#x27;setItemAsync&#x27;, &#x27;removeItemAsync&#x27;], controller);
+    requireMethods('An async StorageController', ['getItemAsync', 'setItemAsync', 'removeItemAsync'], controller);
   } else {
-    requireMethods(&#x27;A synchronous StorageController&#x27;, [&#x27;getItem&#x27;, &#x27;setItem&#x27;, &#x27;removeItem&#x27;], controller);
+    requireMethods('A synchronous StorageController', ['getItem', 'setItem', 'removeItem'], controller);
   }
-  config[&#x27;StorageController&#x27;] = controller;
+  config['StorageController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3681,9 +3674,9 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">CoreManager.setUserController = function (controller) {
-  requireMethods(&#x27;UserController&#x27;, [&#x27;setCurrentUser&#x27;, &#x27;currentUser&#x27;, &#x27;currentUserAsync&#x27;, &#x27;signUp&#x27;, &#x27;logIn&#x27;, &#x27;become&#x27;, &#x27;logOut&#x27;, &#x27;
-requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWith&#x27;], controller);
-  config[&#x27;UserController&#x27;] = controller;
+  requireMethods('UserController', ['setCurrentUser', 'currentUser', 'currentUserAsync', 'signUp', 'logIn', 'become', 'logOut', '
+requestPasswordReset', 'upgradeToRevocableSession', 'linkWith'], controller);
+  config['UserController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3716,8 +3709,8 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">FacebookUtils.init = function (options) {
-  if (typeof FB === &#x27;undefined&#x27;) {
-    throw new Error(&#x27;The Facebook JavaScript SDK must be loaded before calling init.&#x27;);
+  if (typeof FB === 'undefined') {
+    throw new Error('The Facebook JavaScript SDK must be loaded before calling init.');
   }
   initOptions = {};
   if (options) {
@@ -3725,10 +3718,10 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
       initOptions[key] = options[key];
     }
   }
-  if (initOptions.status &#x26;&#x26; typeof console !== &#x27;undefined&#x27;) {
+  if (initOptions.status &amp;&amp; typeof console !== 'undefined') {
     var warn = console.warn || console.log || function () {};
-    warn.call(console, &#x27;The &#x22;status&#x22; flag passed into&#x27; + &#x27; FB.init, when set to true, can interfere with Parse Facebook&#x27; + &#x27; integration
-, so it has been suppressed. Please call&#x27; + &#x27; FB.getLoginStatus() explicitly if you require this behavior.&#x27;);
+    warn.call(console, 'The "status" flag passed into' + ' FB.init, when set to true, can interfere with Parse Facebook' + ' integration
+, so it has been suppressed. Please call' + ' FB.getLoginStatus() explicitly if you require this behavior.');
   }
   initOptions.status = false;
   FB.init(initOptions);
@@ -3748,7 +3741,7 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">FacebookUtils.isLinked = function (user) {
-  return user._isLinked(&#x27;facebook&#x27;);
+  return user._isLinked('facebook');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3763,12 +3756,12 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">FacebookUtils.link = function (user, permissions, options) {
-  if (!permissions || typeof permissions === &#x27;string&#x27;) {
+  if (!permissions || typeof permissions === 'string') {
     if (!initialized) {
-      throw new Error(&#x27;You must initialize FacebookUtils before calling link.&#x27;);
+      throw new Error('You must initialize FacebookUtils before calling link.');
     }
     requestedPermissions = permissions;
-    return user._linkWith(&#x27;facebook&#x27;, options);
+    return user._linkWith('facebook', options);
   } else {
     var newOptions = {};
     if (options) {
@@ -3777,7 +3770,7 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
       }
     }
     newOptions.authData = permissions;
-    return user._linkWith(&#x27;facebook&#x27;, newOptions);
+    return user._linkWith('facebook', newOptions);
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -3793,12 +3786,12 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">FacebookUtils.logIn = function (permissions, options) {
-  if (!permissions || typeof permissions === &#x27;string&#x27;) {
+  if (!permissions || typeof permissions === 'string') {
     if (!initialized) {
-      throw new Error(&#x27;You must initialize FacebookUtils before calling logIn.&#x27;);
+      throw new Error('You must initialize FacebookUtils before calling logIn.');
     }
     requestedPermissions = permissions;
-    return _ParseUser2.default._logInWith(&#x27;facebook&#x27;, options);
+    return _ParseUser2.default._logInWith('facebook', options);
   } else {
     var newOptions = {};
     if (options) {
@@ -3807,7 +3800,7 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
       }
     }
     newOptions.authData = permissions;
-    return _ParseUser2.default._logInWith(&#x27;facebook&#x27;, newOptions);
+    return _ParseUser2.default._logInWith('facebook', newOptions);
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -3824,9 +3817,9 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     <ul>
     <li>description and source-code<pre class="apidocCodePre">FacebookUtils.unlink = function (user, options) {
   if (!initialized) {
-    throw new Error(&#x27;You must initialize FacebookUtils before calling unlink.&#x27;);
+    throw new Error('You must initialize FacebookUtils before calling unlink.');
   }
-  return user._unlinkFrom(&#x27;facebook&#x27;, options);
+  return user._unlinkFrom('facebook', options);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3843,44 +3836,44 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     <li>description and source-code<pre class="apidocCodePre">function ParseFile(name, data, type) {
   (0, _classCallCheck3.default)(this, ParseFile);
 
-  var specifiedType = type || &#x27;&#x27;;
+  var specifiedType = type || '';
 
   this._name = name;
 
   if (data !== undefined) {
     if (Array.isArray(data)) {
       this._source = {
-        format: &#x27;base64&#x27;,
+        format: 'base64',
         base64: ParseFile.encodeBase64(data),
         type: specifiedType
       };
-    } else if (typeof File !== &#x27;undefined&#x27; &#x26;&#x26; data instanceof File) {
+    } else if (typeof File !== 'undefined' &amp;&amp; data instanceof File) {
       this._source = {
-        format: &#x27;file&#x27;,
+        format: 'file',
         file: data,
         type: specifiedType
       };
-    } else if (data &#x26;&#x26; typeof data.base64 === &#x27;string&#x27;) {
+    } else if (data &amp;&amp; typeof data.base64 === 'string') {
       var _base = data.base64;
-      var commaIndex = _base.indexOf(&#x27;,&#x27;);
+      var commaIndex = _base.indexOf(',');
 
       if (commaIndex !== -1) {
         var matches = dataUriRegexp.exec(_base.slice(0, commaIndex + 1));
         // if data URI with type and charset, there will be 4 matches.
         this._source = {
-          format: &#x27;base64&#x27;,
+          format: 'base64',
           base64: _base.slice(commaIndex + 1),
           type: matches[1]
         };
       } else {
         this._source = {
-          format: &#x27;base64&#x27;,
+          format: 'base64',
           base64: _base,
           type: specifiedType
         };
       }
     } else {
-      throw new TypeError(&#x27;Cannot create a Parse.File with that data.&#x27;);
+      throw new TypeError('Cannot create a Parse.File with that data.');
     }
   }
 }</pre></li>
@@ -3903,11 +3896,11 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     ParseGeoPoint._validate(arg1[0], arg1[1]);
     this._latitude = arg1[0];
     this._longitude = arg1[1];
-  } else if ((typeof arg1 === &#x27;undefined&#x27; ? &#x27;undefined&#x27; : (0, _typeof3.default)(arg1)) === &#x27;object&#x27;) {
+  } else if ((typeof arg1 === 'undefined' ? 'undefined' : (0, _typeof3.default)(arg1)) === 'object') {
     ParseGeoPoint._validate(arg1.latitude, arg1.longitude);
     this._latitude = arg1.latitude;
     this._longitude = arg1.longitude;
-  } else if (typeof arg1 === &#x27;number&#x27; &#x26;&#x26; typeof arg2 === &#x27;number&#x27;) {
+  } else if (typeof arg1 === 'number' &amp;&amp; typeof arg2 === 'number') {
     ParseGeoPoint._validate(arg1, arg2);
     this._latitude = arg1;
     this._longitude = arg2;
@@ -3932,11 +3925,11 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
   (0, _classCallCheck3.default)(this, Installation);
 
   var _this = (0, _possibleConstructorReturn3.default)(this, (Installation.__proto__ || (0, _getPrototypeOf2.default)(Installation
-)).call(this, &#x27;_Installation&#x27;));
+)).call(this, '_Installation'));
 
-  if (attributes &#x26;&#x26; (typeof attributes === &#x27;undefined&#x27; ? &#x27;undefined&#x27; : (0, _typeof3.default)(attributes)) === &#x27;object&#x27;) {
+  if (attributes &amp;&amp; (typeof attributes === 'undefined' ? 'undefined' : (0, _typeof3.default)(attributes)) === 'object') {
     if (!_this.set(attributes || {})) {
-      throw new Error(&#x27;Can\&#x27;t create an invalid Session&#x27;);
+      throw new Error('Can\'t create an invalid Session');
     }
   }
   return _this;
@@ -3996,8 +3989,8 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
   var _this = (0, _possibleConstructorReturn3.default)(this, (LiveQueryClient.__proto__ || (0, _getPrototypeOf2.default)(LiveQueryClient
 )).call(this));
 
-  if (!serverURL || serverURL.indexOf(&#x27;ws&#x27;) !== 0) {
-    throw new Error(&#x27;You need to set a proper Parse LiveQuery server url before using LiveQueryClient&#x27;);
+  if (!serverURL || serverURL.indexOf('ws') !== 0) {
+    throw new Error('You need to set a proper Parse LiveQuery server url before using LiveQueryClient');
   }
 
   _this.reconnectHandle = null;
@@ -4030,31 +4023,31 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
   (0, _classCallCheck3.default)(this, ParseObject);
 
   // Enable legacy initializers
-  if (typeof this.initialize === &#x27;function&#x27;) {
+  if (typeof this.initialize === 'function') {
     this.initialize.apply(this, arguments);
   }
 
   var toSet = null;
   this._objCount = objectCount++;
-  if (typeof className === &#x27;string&#x27;) {
+  if (typeof className === 'string') {
     this.className = className;
-    if (attributes &#x26;&#x26; (typeof attributes === &#x27;undefined&#x27; ? &#x27;undefined&#x27; : (0, _typeof3.default)(attributes)) === &#x27;object&#x27;) {
+    if (attributes &amp;&amp; (typeof attributes === 'undefined' ? 'undefined' : (0, _typeof3.default)(attributes)) === 'object') {
       toSet = attributes;
     }
-  } else if (className &#x26;&#x26; (typeof className === &#x27;undefined&#x27; ? &#x27;undefined&#x27; : (0, _typeof3.default)(className)) === &#x27;object&#x27;) {
+  } else if (className &amp;&amp; (typeof className === 'undefined' ? 'undefined' : (0, _typeof3.default)(className)) === 'object') {
     this.className = className.className;
     toSet = {};
     for (var attr in className) {
-      if (attr !== &#x27;className&#x27;) {
+      if (attr !== 'className') {
         toSet[attr] = className[attr];
       }
     }
-    if (attributes &#x26;&#x26; (typeof attributes === &#x27;undefined&#x27; ? &#x27;undefined&#x27; : (0, _typeof3.default)(attributes)) === &#x27;object&#x27;) {
+    if (attributes &amp;&amp; (typeof attributes === 'undefined' ? 'undefined' : (0, _typeof3.default)(attributes)) === 'object') {
       options = attributes;
     }
   }
-  if (toSet &#x26;&#x26; !this.set(toSet, options)) {
-    throw new Error(&#x27;Can\&#x27;t create an invalid Parse Object&#x27;);
+  if (toSet &amp;&amp; !this.set(toSet, options)) {
+    throw new Error('Can\'t create an invalid Parse Object');
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -4117,8 +4110,8 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
   var _this3 = (0, _possibleConstructorReturn3.default)(this, (IncrementOp.__proto__ || (0, _getPrototypeOf2.default)(IncrementOp
 )).call(this));
 
-  if (typeof amount !== &#x27;number&#x27;) {
-    throw new TypeError(&#x27;Increment Op must be initialized with a numeric amount.&#x27;);
+  if (typeof amount !== 'number') {
+    throw new TypeError('Increment Op must be initialized with a numeric amount.');
   }
   _this3._amount = amount;
   return _this3;
@@ -4231,7 +4224,7 @@ call(this));
   this._resolvedCallbacks = [];
   this._rejectedCallbacks = [];
 
-  if (typeof executor === &#x27;function&#x27;) {
+  if (typeof executor === 'function') {
     executor(this.resolve.bind(this), this.reject.bind(this));
   }
 }</pre></li>
@@ -4250,20 +4243,20 @@ call(this));
     <li>description and source-code<pre class="apidocCodePre">function send(data, options) {
   options = options || {};
 
-  if (data.where &#x26;&#x26; data.where instanceof _ParseQuery2.default) {
+  if (data.where &amp;&amp; data.where instanceof _ParseQuery2.default) {
     data.where = data.where.toJSON().where;
   }
 
-  if (data.push_time &#x26;&#x26; (0, _typeof3.default)(data.push_time) === &#x27;object&#x27;) {
+  if (data.push_time &amp;&amp; (0, _typeof3.default)(data.push_time) === 'object') {
     data.push_time = data.push_time.toJSON();
   }
 
-  if (data.expiration_time &#x26;&#x26; (0, _typeof3.default)(data.expiration_time) === &#x27;object&#x27;) {
+  if (data.expiration_time &amp;&amp; (0, _typeof3.default)(data.expiration_time) === 'object') {
     data.expiration_time = data.expiration_time.toJSON();
   }
 
-  if (data.expiration_time &#x26;&#x26; data.expiration_interval) {
-    throw new Error(&#x27;expiration_time and expiration_interval cannot both be set.&#x27;);
+  if (data.expiration_time &amp;&amp; data.expiration_interval) {
+    throw new Error('expiration_time and expiration_interval cannot both be set.');
   }
 
   return _CoreManager2.default.getPushController().send(data, {
@@ -4285,23 +4278,23 @@ call(this));
     <li>description and source-code<pre class="apidocCodePre">function ParseQuery(objectClass) {
   (0, _classCallCheck3.default)(this, ParseQuery);
 
-  if (typeof objectClass === &#x27;string&#x27;) {
-    if (objectClass === &#x27;User&#x27; &#x26;&#x26; _CoreManager2.default.get(&#x27;PERFORM_USER_REWRITE&#x27;)) {
-      this.className = &#x27;_User&#x27;;
+  if (typeof objectClass === 'string') {
+    if (objectClass === 'User' &amp;&amp; _CoreManager2.default.get('PERFORM_USER_REWRITE')) {
+      this.className = '_User';
     } else {
       this.className = objectClass;
     }
   } else if (objectClass instanceof _ParseObject2.default) {
     this.className = objectClass.className;
-  } else if (typeof objectClass === &#x27;function&#x27;) {
-    if (typeof objectClass.className === &#x27;string&#x27;) {
+  } else if (typeof objectClass === 'function') {
+    if (typeof objectClass.className === 'string') {
       this.className = objectClass.className;
     } else {
       var obj = new objectClass();
       this.className = obj.className;
     }
   } else {
-    throw new TypeError(&#x27;A ParseQuery must be constructed with a ParseObject or class name.&#x27;);
+    throw new TypeError('A ParseQuery must be constructed with a ParseObject or class name.');
   }
 
   this._where = {};
@@ -4345,9 +4338,9 @@ call(this));
   (0, _classCallCheck3.default)(this, ParseRole);
 
   var _this = (0, _possibleConstructorReturn3.default)(this, (ParseRole.__proto__ || (0, _getPrototypeOf2.default)(ParseRole)).call
-(this, &#x27;_Role&#x27;));
+(this, '_Role'));
 
-  if (typeof name === &#x27;string&#x27; &#x26;&#x26; acl instanceof _ParseACL2.default) {
+  if (typeof name === 'string' &amp;&amp; acl instanceof _ParseACL2.default) {
     _this.setName(name);
     _this.setACL(acl);
   }
@@ -4369,11 +4362,11 @@ call(this));
   (0, _classCallCheck3.default)(this, ParseSession);
 
   var _this = (0, _possibleConstructorReturn3.default)(this, (ParseSession.__proto__ || (0, _getPrototypeOf2.default)(ParseSession
-)).call(this, &#x27;_Session&#x27;));
+)).call(this, '_Session'));
 
-  if (attributes &#x26;&#x26; (typeof attributes === &#x27;undefined&#x27; ? &#x27;undefined&#x27; : (0, _typeof3.default)(attributes)) === &#x27;object&#x27;) {
+  if (attributes &amp;&amp; (typeof attributes === 'undefined' ? 'undefined' : (0, _typeof3.default)(attributes)) === 'object') {
     if (!_this.set(attributes || {})) {
-      throw new Error(&#x27;Can\&#x27;t create an invalid Session&#x27;);
+      throw new Error('Can\'t create an invalid Session');
     }
   }
   return _this;
@@ -4392,7 +4385,7 @@ call(this));
     <ul>
     <li>description and source-code<pre class="apidocCodePre">Storage._clear = function () {
   var controller = _CoreManager2.default.getStorageController();
-  if (controller.hasOwnProperty(&#x27;clear&#x27;)) {
+  if (controller.hasOwnProperty('clear')) {
     controller.clear();
   }
 }</pre></li>
@@ -4425,16 +4418,16 @@ call(this));
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">Storage.generatePath = function (path) {
-  if (!_CoreManager2.default.get(&#x27;APPLICATION_ID&#x27;)) {
-    throw new Error(&#x27;You need to call Parse.initialize before using Parse.&#x27;);
+  if (!_CoreManager2.default.get('APPLICATION_ID')) {
+    throw new Error('You need to call Parse.initialize before using Parse.');
   }
-  if (typeof path !== &#x27;string&#x27;) {
-    throw new Error(&#x27;Tried to get a Storage path that was not a String.&#x27;);
+  if (typeof path !== 'string') {
+    throw new Error('Tried to get a Storage path that was not a String.');
   }
-  if (path[0] === &#x27;/&#x27;) {
+  if (path[0] === '/') {
     path = path.substr(1);
   }
-  return &#x27;Parse/&#x27; + _CoreManager2.default.get(&#x27;APPLICATION_ID&#x27;) + &#x27;/&#x27; + path;
+  return 'Parse/' + _CoreManager2.default.get('APPLICATION_ID') + '/' + path;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -4451,7 +4444,7 @@ call(this));
     <li>description and source-code<pre class="apidocCodePre">Storage.getItem = function (path) {
   var controller = _CoreManager2.default.getStorageController();
   if (controller.async === 1) {
-    throw new Error(&#x27;Synchronous storage is not supported by the current storage controller&#x27;);
+    throw new Error('Synchronous storage is not supported by the current storage controller');
   }
   return controller.getItem(path);
 }</pre></li>
@@ -4489,7 +4482,7 @@ call(this));
     <li>description and source-code<pre class="apidocCodePre">Storage.removeItem = function (path) {
   var controller = _CoreManager2.default.getStorageController();
   if (controller.async === 1) {
-    throw new Error(&#x27;Synchronous storage is not supported by the current storage controller&#x27;);
+    throw new Error('Synchronous storage is not supported by the current storage controller');
   }
   return controller.removeItem(path);
 }</pre></li>
@@ -4527,7 +4520,7 @@ call(this));
     <li>description and source-code<pre class="apidocCodePre">Storage.setItem = function (path, value) {
   var controller = _CoreManager2.default.getStorageController();
   if (controller.async === 1) {
-    throw new Error(&#x27;Synchronous storage is not supported by the current storage controller&#x27;);
+    throw new Error('Synchronous storage is not supported by the current storage controller');
   }
   return controller.setItem(path, value);
 }</pre></li>
@@ -4566,11 +4559,11 @@ call(this));
   (0, _classCallCheck3.default)(this, ParseUser);
 
   var _this = (0, _possibleConstructorReturn3.default)(this, (ParseUser.__proto__ || (0, _getPrototypeOf2.default)(ParseUser)).call
-(this, &#x27;_User&#x27;));
+(this, '_User'));
 
-  if (attributes &#x26;&#x26; (typeof attributes === &#x27;undefined&#x27; ? &#x27;undefined&#x27; : (0, _typeof3.default)(attributes)) === &#x27;object&#x27;) {
+  if (attributes &amp;&amp; (typeof attributes === 'undefined' ? 'undefined' : (0, _typeof3.default)(attributes)) === 'object') {
     if (!_this.set(attributes || {})) {
-      throw new Error(&#x27;Can\&#x27;t create an invalid Parse User&#x27;);
+      throw new Error('Can\'t create an invalid Parse User');
     }
   }
   return _this;
@@ -4588,7 +4581,7 @@ call(this));
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">_ajax = function () {
-  for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 &#x3c; _len2; _key2++) {
+  for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 &lt; _len2; _key2++) {
     args[_key2] = arguments[_key2];
   }
 
@@ -4652,10 +4645,10 @@ call(this));
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">_initialize = function (applicationId, javaScriptKey, masterKey) {
-  _CoreManager2.default.set(&#x27;APPLICATION_ID&#x27;, applicationId);
-  _CoreManager2.default.set(&#x27;JAVASCRIPT_KEY&#x27;, javaScriptKey);
-  _CoreManager2.default.set(&#x27;MASTER_KEY&#x27;, masterKey);
-  _CoreManager2.default.set(&#x27;USE_MASTER_KEY&#x27;, false);
+  _CoreManager2.default.set('APPLICATION_ID', applicationId);
+  _CoreManager2.default.set('JAVASCRIPT_KEY', javaScriptKey);
+  _CoreManager2.default.set('MASTER_KEY', masterKey);
+  _CoreManager2.default.set('USE_MASTER_KEY', false);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -4670,7 +4663,7 @@ call(this));
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">_request = function () {
-  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &lt; _len; _key++) {
     args[_key] = arguments[_key];
   }
 
@@ -4689,9 +4682,9 @@ call(this));
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">initialize = function (applicationId, javaScriptKey) {
-  if (&#x27;browser&#x27; === &#x27;browser&#x27; &#x26;&#x26; _CoreManager2.default.get(&#x27;IS_NODE&#x27;)) {
-    console.log(&#x27;It looks like you\&#x27;re using the browser version of the SDK in a &#x27; + &#x27;node.js environment. You should require(\&#x27;
-parse/node\&#x27;) instead.&#x27;);
+  if ('browser' === 'browser' &amp;&amp; _CoreManager2.default.get('IS_NODE')) {
+    console.log('It looks like you\'re using the browser version of the SDK in a ' + 'node.js environment. You should require(\'
+parse/node\') instead.');
   }
   Parse._initialize(applicationId, javaScriptKey);
 }</pre></li>
@@ -4738,31 +4731,31 @@ parse/node\&#x27;) instead.&#x27;);
   (0, _classCallCheck3.default)(this, ParseACL);
 
   this.permissionsById = {};
-  if (arg1 &#x26;&#x26; (typeof arg1 === &#x27;undefined&#x27; ? &#x27;undefined&#x27; : (0, _typeof3.default)(arg1)) === &#x27;object&#x27;) {
+  if (arg1 &amp;&amp; (typeof arg1 === 'undefined' ? 'undefined' : (0, _typeof3.default)(arg1)) === 'object') {
     if (arg1 instanceof _ParseUser2.default) {
       this.setReadAccess(arg1, true);
       this.setWriteAccess(arg1, true);
     } else {
       for (var userId in arg1) {
         var accessList = arg1[userId];
-        if (typeof userId !== &#x27;string&#x27;) {
-          throw new TypeError(&#x27;Tried to create an ACL with an invalid user id.&#x27;);
+        if (typeof userId !== 'string') {
+          throw new TypeError('Tried to create an ACL with an invalid user id.');
         }
         this.permissionsById[userId] = {};
         for (var permission in accessList) {
           var allowed = accessList[permission];
-          if (permission !== &#x27;read&#x27; &#x26;&#x26; permission !== &#x27;write&#x27;) {
-            throw new TypeError(&#x27;Tried to create an ACL with an invalid permission type.&#x27;);
+          if (permission !== 'read' &amp;&amp; permission !== 'write') {
+            throw new TypeError('Tried to create an ACL with an invalid permission type.');
           }
-          if (typeof allowed !== &#x27;boolean&#x27;) {
-            throw new TypeError(&#x27;Tried to create an ACL with an invalid permission value.&#x27;);
+          if (typeof allowed !== 'boolean') {
+            throw new TypeError('Tried to create an ACL with an invalid permission value.');
           }
           this.permissionsById[userId][permission] = allowed;
         }
       }
     }
-  } else if (typeof arg1 === &#x27;function&#x27;) {
-    throw new TypeError(&#x27;ParseACL constructed with a function. Did you forget ()?&#x27;);
+  } else if (typeof arg1 === 'function') {
+    throw new TypeError('ParseACL constructed with a function. Did you forget ()?');
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -4783,16 +4776,16 @@ parse/node\&#x27;) instead.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function track(name, dimensions, options) {
-  name = name || &#x27;&#x27;;
-  name = name.replace(/^\s*/, &#x27;&#x27;);
-  name = name.replace(/\s*$/, &#x27;&#x27;);
+  name = name || '';
+  name = name.replace(/^\s*/, '');
+  name = name.replace(/\s*$/, '');
   if (name.length === 0) {
-    throw new TypeError(&#x27;A name for the custom event must be provided&#x27;);
+    throw new TypeError('A name for the custom event must be provided');
   }
 
   for (var key in dimensions) {
-    if (typeof key !== &#x27;string&#x27; || typeof dimensions[key] !== &#x27;string&#x27;) {
-      throw new TypeError(&#x27;track() dimensions expects keys and values of type &#x22;string&#x22;.&#x27;);
+    if (typeof key !== 'string' || typeof dimensions[key] !== 'string') {
+      throw new TypeError('track() dimensions expects keys and values of type "string".');
     }
   }
 
@@ -4817,16 +4810,16 @@ parse/node\&#x27;) instead.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function track(name, dimensions, options) {
-  name = name || &#x27;&#x27;;
-  name = name.replace(/^\s*/, &#x27;&#x27;);
-  name = name.replace(/\s*$/, &#x27;&#x27;);
+  name = name || '';
+  name = name.replace(/^\s*/, '');
+  name = name.replace(/\s*$/, '');
   if (name.length === 0) {
-    throw new TypeError(&#x27;A name for the custom event must be provided&#x27;);
+    throw new TypeError('A name for the custom event must be provided');
   }
 
   for (var key in dimensions) {
-    if (typeof key !== &#x27;string&#x27; || typeof dimensions[key] !== &#x27;string&#x27;) {
-      throw new TypeError(&#x27;track() dimensions expects keys and values of type &#x22;string&#x22;.&#x27;);
+    if (typeof key !== 'string' || typeof dimensions[key] !== 'string') {
+      throw new TypeError('track() dimensions expects keys and values of type "string".');
     }
   }
 
@@ -4853,8 +4846,8 @@ parse/node\&#x27;) instead.&#x27;);
     <li>description and source-code<pre class="apidocCodePre">function run(name, data, options) {
   options = options || {};
 
-  if (typeof name !== &#x27;string&#x27; || name.length === 0) {
-    throw new TypeError(&#x27;Cloud function name must be a string.&#x27;);
+  if (typeof name !== 'string' || name.length === 0) {
+    throw new TypeError('Cloud function name must be a string.');
   }
 
   var requestOptions = {};
@@ -4887,8 +4880,8 @@ parse/node\&#x27;) instead.&#x27;);
     <li>description and source-code<pre class="apidocCodePre">function run(name, data, options) {
   options = options || {};
 
-  if (typeof name !== &#x27;string&#x27; || name.length === 0) {
-    throw new TypeError(&#x27;Cloud function name must be a string.&#x27;);
+  if (typeof name !== 'string' || name.length === 0) {
+    throw new TypeError('Cloud function name must be a string.');
   }
 
   var requestOptions = {};
@@ -4945,7 +4938,7 @@ parse/node\&#x27;) instead.&#x27;);
   if (config.hasOwnProperty(key)) {
     return config[key];
   }
-  throw new Error(&#x27;Configuration key not found: &#x27; + key);
+  throw new Error('Configuration key not found: ' + key);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -4960,7 +4953,7 @@ parse/node\&#x27;) instead.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getAnalyticsController = function () {
-  return config[&#x27;AnalyticsController&#x27;];
+  return config['AnalyticsController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -4975,7 +4968,7 @@ parse/node\&#x27;) instead.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getCloudController = function () {
-  return config[&#x27;CloudController&#x27;];
+  return config['CloudController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -4990,7 +4983,7 @@ parse/node\&#x27;) instead.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getConfigController = function () {
-  return config[&#x27;ConfigController&#x27;];
+  return config['ConfigController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5005,7 +4998,7 @@ parse/node\&#x27;) instead.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getFileController = function () {
-  return config[&#x27;FileController&#x27;];
+  return config['FileController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5020,7 +5013,7 @@ parse/node\&#x27;) instead.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getHooksController = function () {
-  return config[&#x27;HooksController&#x27;];
+  return config['HooksController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5035,7 +5028,7 @@ parse/node\&#x27;) instead.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getInstallationController = function () {
-  return config[&#x27;InstallationController&#x27;];
+  return config['InstallationController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5050,7 +5043,7 @@ parse/node\&#x27;) instead.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getLiveQueryController = function () {
-  return config[&#x27;LiveQueryController&#x27;];
+  return config['LiveQueryController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5065,7 +5058,7 @@ parse/node\&#x27;) instead.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getObjectController = function () {
-  return config[&#x27;ObjectController&#x27;];
+  return config['ObjectController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5080,7 +5073,7 @@ parse/node\&#x27;) instead.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getObjectStateController = function () {
-  return config[&#x27;ObjectStateController&#x27;];
+  return config['ObjectStateController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5095,7 +5088,7 @@ parse/node\&#x27;) instead.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getPushController = function () {
-  return config[&#x27;PushController&#x27;];
+  return config['PushController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5110,7 +5103,7 @@ parse/node\&#x27;) instead.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getQueryController = function () {
-  return config[&#x27;QueryController&#x27;];
+  return config['QueryController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5125,7 +5118,7 @@ parse/node\&#x27;) instead.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getRESTController = function () {
-  return config[&#x27;RESTController&#x27;];
+  return config['RESTController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5140,7 +5133,7 @@ parse/node\&#x27;) instead.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getSessionController = function () {
-  return config[&#x27;SessionController&#x27;];
+  return config['SessionController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5155,7 +5148,7 @@ parse/node\&#x27;) instead.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getStorageController = function () {
-  return config[&#x27;StorageController&#x27;];
+  return config['StorageController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5170,7 +5163,7 @@ parse/node\&#x27;) instead.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getUserController = function () {
-  return config[&#x27;UserController&#x27;];
+  return config['UserController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5200,8 +5193,8 @@ parse/node\&#x27;) instead.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">setAnalyticsController = function (controller) {
-  requireMethods(&#x27;AnalyticsController&#x27;, [&#x27;track&#x27;], controller);
-  config[&#x27;AnalyticsController&#x27;] = controller;
+  requireMethods('AnalyticsController', ['track'], controller);
+  config['AnalyticsController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5216,8 +5209,8 @@ parse/node\&#x27;) instead.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">setCloudController = function (controller) {
-  requireMethods(&#x27;CloudController&#x27;, [&#x27;run&#x27;], controller);
-  config[&#x27;CloudController&#x27;] = controller;
+  requireMethods('CloudController', ['run'], controller);
+  config['CloudController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5232,8 +5225,8 @@ parse/node\&#x27;) instead.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">setConfigController = function (controller) {
-  requireMethods(&#x27;ConfigController&#x27;, [&#x27;current&#x27;, &#x27;get&#x27;], controller);
-  config[&#x27;ConfigController&#x27;] = controller;
+  requireMethods('ConfigController', ['current', 'get'], controller);
+  config['ConfigController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5248,8 +5241,8 @@ parse/node\&#x27;) instead.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">setFileController = function (controller) {
-  requireMethods(&#x27;FileController&#x27;, [&#x27;saveFile&#x27;, &#x27;saveBase64&#x27;], controller);
-  config[&#x27;FileController&#x27;] = controller;
+  requireMethods('FileController', ['saveFile', 'saveBase64'], controller);
+  config['FileController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5264,8 +5257,8 @@ parse/node\&#x27;) instead.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">setHooksController = function (controller) {
-  requireMethods(&#x27;HooksController&#x27;, [&#x27;create&#x27;, &#x27;get&#x27;, &#x27;update&#x27;, &#x27;remove&#x27;], controller);
-  config[&#x27;HooksController&#x27;] = controller;
+  requireMethods('HooksController', ['create', 'get', 'update', 'remove'], controller);
+  config['HooksController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5280,8 +5273,8 @@ parse/node\&#x27;) instead.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">setInstallationController = function (controller) {
-  requireMethods(&#x27;InstallationController&#x27;, [&#x27;currentInstallationId&#x27;], controller);
-  config[&#x27;InstallationController&#x27;] = controller;
+  requireMethods('InstallationController', ['currentInstallationId'], controller);
+  config['InstallationController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5296,8 +5289,8 @@ parse/node\&#x27;) instead.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">setLiveQueryController = function (controller) {
-  requireMethods(&#x27;LiveQueryController&#x27;, [&#x27;subscribe&#x27;, &#x27;unsubscribe&#x27;, &#x27;open&#x27;, &#x27;close&#x27;], controller);
-  config[&#x27;LiveQueryController&#x27;] = controller;
+  requireMethods('LiveQueryController', ['subscribe', 'unsubscribe', 'open', 'close'], controller);
+  config['LiveQueryController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5312,8 +5305,8 @@ parse/node\&#x27;) instead.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">setObjectController = function (controller) {
-  requireMethods(&#x27;ObjectController&#x27;, [&#x27;save&#x27;, &#x27;fetch&#x27;, &#x27;destroy&#x27;], controller);
-  config[&#x27;ObjectController&#x27;] = controller;
+  requireMethods('ObjectController', ['save', 'fetch', 'destroy'], controller);
+  config['ObjectController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5328,11 +5321,11 @@ parse/node\&#x27;) instead.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">setObjectStateController = function (controller) {
-  requireMethods(&#x27;ObjectStateController&#x27;, [&#x27;getState&#x27;, &#x27;initializeState&#x27;, &#x27;removeState&#x27;, &#x27;getServerData&#x27;, &#x27;setServerData&#x27;, &#x27;getPendingOps
-&#x27;, &#x27;setPendingOp&#x27;, &#x27;pushPendingState&#x27;, &#x27;popPendingState&#x27;, &#x27;mergeFirstPendingState&#x27;, &#x27;getObjectCache&#x27;, &#x27;estimateAttribute&#x27;, &#x27;estimateAttributes
-&#x27;, &#x27;commitServerChanges&#x27;, &#x27;enqueueTask&#x27;, &#x27;clearAllState&#x27;], controller);
+  requireMethods('ObjectStateController', ['getState', 'initializeState', 'removeState', 'getServerData', 'setServerData', 'getPendingOps
+', 'setPendingOp', 'pushPendingState', 'popPendingState', 'mergeFirstPendingState', 'getObjectCache', 'estimateAttribute', 'estimateAttributes
+', 'commitServerChanges', 'enqueueTask', 'clearAllState'], controller);
 
-  config[&#x27;ObjectStateController&#x27;] = controller;
+  config['ObjectStateController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5347,8 +5340,8 @@ parse/node\&#x27;) instead.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">setPushController = function (controller) {
-  requireMethods(&#x27;PushController&#x27;, [&#x27;send&#x27;], controller);
-  config[&#x27;PushController&#x27;] = controller;
+  requireMethods('PushController', ['send'], controller);
+  config['PushController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5363,8 +5356,8 @@ parse/node\&#x27;) instead.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">setQueryController = function (controller) {
-  requireMethods(&#x27;QueryController&#x27;, [&#x27;find&#x27;], controller);
-  config[&#x27;QueryController&#x27;] = controller;
+  requireMethods('QueryController', ['find'], controller);
+  config['QueryController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5379,8 +5372,8 @@ parse/node\&#x27;) instead.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">setRESTController = function (controller) {
-  requireMethods(&#x27;RESTController&#x27;, [&#x27;request&#x27;, &#x27;ajax&#x27;], controller);
-  config[&#x27;RESTController&#x27;] = controller;
+  requireMethods('RESTController', ['request', 'ajax'], controller);
+  config['RESTController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5395,8 +5388,8 @@ parse/node\&#x27;) instead.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">setSessionController = function (controller) {
-  requireMethods(&#x27;SessionController&#x27;, [&#x27;getSession&#x27;], controller);
-  config[&#x27;SessionController&#x27;] = controller;
+  requireMethods('SessionController', ['getSession'], controller);
+  config['SessionController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5412,11 +5405,11 @@ parse/node\&#x27;) instead.&#x27;);
     <ul>
     <li>description and source-code<pre class="apidocCodePre">setStorageController = function (controller) {
   if (controller.async) {
-    requireMethods(&#x27;An async StorageController&#x27;, [&#x27;getItemAsync&#x27;, &#x27;setItemAsync&#x27;, &#x27;removeItemAsync&#x27;], controller);
+    requireMethods('An async StorageController', ['getItemAsync', 'setItemAsync', 'removeItemAsync'], controller);
   } else {
-    requireMethods(&#x27;A synchronous StorageController&#x27;, [&#x27;getItem&#x27;, &#x27;setItem&#x27;, &#x27;removeItem&#x27;], controller);
+    requireMethods('A synchronous StorageController', ['getItem', 'setItem', 'removeItem'], controller);
   }
-  config[&#x27;StorageController&#x27;] = controller;
+  config['StorageController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5431,9 +5424,9 @@ parse/node\&#x27;) instead.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">setUserController = function (controller) {
-  requireMethods(&#x27;UserController&#x27;, [&#x27;setCurrentUser&#x27;, &#x27;currentUser&#x27;, &#x27;currentUserAsync&#x27;, &#x27;signUp&#x27;, &#x27;logIn&#x27;, &#x27;become&#x27;, &#x27;logOut&#x27;, &#x27;
-requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWith&#x27;], controller);
-  config[&#x27;UserController&#x27;] = controller;
+  requireMethods('UserController', ['setCurrentUser', 'currentUser', 'currentUserAsync', 'signUp', 'logIn', 'become', 'logOut', '
+requestPasswordReset', 'upgradeToRevocableSession', 'linkWith'], controller);
+  config['UserController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5456,7 +5449,7 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
   if (config.hasOwnProperty(key)) {
     return config[key];
   }
-  throw new Error(&#x27;Configuration key not found: &#x27; + key);
+  throw new Error('Configuration key not found: ' + key);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5476,7 +5469,7 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getAnalyticsController = function () {
-  return config[&#x27;AnalyticsController&#x27;];
+  return config['AnalyticsController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5496,7 +5489,7 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getCloudController = function () {
-  return config[&#x27;CloudController&#x27;];
+  return config['CloudController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5516,7 +5509,7 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getConfigController = function () {
-  return config[&#x27;ConfigController&#x27;];
+  return config['ConfigController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5536,7 +5529,7 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getFileController = function () {
-  return config[&#x27;FileController&#x27;];
+  return config['FileController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5556,7 +5549,7 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getHooksController = function () {
-  return config[&#x27;HooksController&#x27;];
+  return config['HooksController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5576,7 +5569,7 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getInstallationController = function () {
-  return config[&#x27;InstallationController&#x27;];
+  return config['InstallationController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5596,7 +5589,7 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getLiveQueryController = function () {
-  return config[&#x27;LiveQueryController&#x27;];
+  return config['LiveQueryController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5616,7 +5609,7 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getObjectController = function () {
-  return config[&#x27;ObjectController&#x27;];
+  return config['ObjectController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5636,7 +5629,7 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getObjectStateController = function () {
-  return config[&#x27;ObjectStateController&#x27;];
+  return config['ObjectStateController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5656,7 +5649,7 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getPushController = function () {
-  return config[&#x27;PushController&#x27;];
+  return config['PushController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5676,7 +5669,7 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getQueryController = function () {
-  return config[&#x27;QueryController&#x27;];
+  return config['QueryController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5696,7 +5689,7 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getRESTController = function () {
-  return config[&#x27;RESTController&#x27;];
+  return config['RESTController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5716,7 +5709,7 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getSessionController = function () {
-  return config[&#x27;SessionController&#x27;];
+  return config['SessionController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5736,7 +5729,7 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getStorageController = function () {
-  return config[&#x27;StorageController&#x27;];
+  return config['StorageController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5756,7 +5749,7 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getUserController = function () {
-  return config[&#x27;UserController&#x27;];
+  return config['UserController'];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5796,8 +5789,8 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">setAnalyticsController = function (controller) {
-  requireMethods(&#x27;AnalyticsController&#x27;, [&#x27;track&#x27;], controller);
-  config[&#x27;AnalyticsController&#x27;] = controller;
+  requireMethods('AnalyticsController', ['track'], controller);
+  config['AnalyticsController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5817,8 +5810,8 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">setCloudController = function (controller) {
-  requireMethods(&#x27;CloudController&#x27;, [&#x27;run&#x27;], controller);
-  config[&#x27;CloudController&#x27;] = controller;
+  requireMethods('CloudController', ['run'], controller);
+  config['CloudController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5838,8 +5831,8 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">setConfigController = function (controller) {
-  requireMethods(&#x27;ConfigController&#x27;, [&#x27;current&#x27;, &#x27;get&#x27;], controller);
-  config[&#x27;ConfigController&#x27;] = controller;
+  requireMethods('ConfigController', ['current', 'get'], controller);
+  config['ConfigController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5859,8 +5852,8 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">setFileController = function (controller) {
-  requireMethods(&#x27;FileController&#x27;, [&#x27;saveFile&#x27;, &#x27;saveBase64&#x27;], controller);
-  config[&#x27;FileController&#x27;] = controller;
+  requireMethods('FileController', ['saveFile', 'saveBase64'], controller);
+  config['FileController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5880,8 +5873,8 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">setHooksController = function (controller) {
-  requireMethods(&#x27;HooksController&#x27;, [&#x27;create&#x27;, &#x27;get&#x27;, &#x27;update&#x27;, &#x27;remove&#x27;], controller);
-  config[&#x27;HooksController&#x27;] = controller;
+  requireMethods('HooksController', ['create', 'get', 'update', 'remove'], controller);
+  config['HooksController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5901,8 +5894,8 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">setInstallationController = function (controller) {
-  requireMethods(&#x27;InstallationController&#x27;, [&#x27;currentInstallationId&#x27;], controller);
-  config[&#x27;InstallationController&#x27;] = controller;
+  requireMethods('InstallationController', ['currentInstallationId'], controller);
+  config['InstallationController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5922,8 +5915,8 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">setLiveQueryController = function (controller) {
-  requireMethods(&#x27;LiveQueryController&#x27;, [&#x27;subscribe&#x27;, &#x27;unsubscribe&#x27;, &#x27;open&#x27;, &#x27;close&#x27;], controller);
-  config[&#x27;LiveQueryController&#x27;] = controller;
+  requireMethods('LiveQueryController', ['subscribe', 'unsubscribe', 'open', 'close'], controller);
+  config['LiveQueryController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5943,8 +5936,8 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">setObjectController = function (controller) {
-  requireMethods(&#x27;ObjectController&#x27;, [&#x27;save&#x27;, &#x27;fetch&#x27;, &#x27;destroy&#x27;], controller);
-  config[&#x27;ObjectController&#x27;] = controller;
+  requireMethods('ObjectController', ['save', 'fetch', 'destroy'], controller);
+  config['ObjectController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5964,11 +5957,11 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">setObjectStateController = function (controller) {
-  requireMethods(&#x27;ObjectStateController&#x27;, [&#x27;getState&#x27;, &#x27;initializeState&#x27;, &#x27;removeState&#x27;, &#x27;getServerData&#x27;, &#x27;setServerData&#x27;, &#x27;getPendingOps
-&#x27;, &#x27;setPendingOp&#x27;, &#x27;pushPendingState&#x27;, &#x27;popPendingState&#x27;, &#x27;mergeFirstPendingState&#x27;, &#x27;getObjectCache&#x27;, &#x27;estimateAttribute&#x27;, &#x27;estimateAttributes
-&#x27;, &#x27;commitServerChanges&#x27;, &#x27;enqueueTask&#x27;, &#x27;clearAllState&#x27;], controller);
+  requireMethods('ObjectStateController', ['getState', 'initializeState', 'removeState', 'getServerData', 'setServerData', 'getPendingOps
+', 'setPendingOp', 'pushPendingState', 'popPendingState', 'mergeFirstPendingState', 'getObjectCache', 'estimateAttribute', 'estimateAttributes
+', 'commitServerChanges', 'enqueueTask', 'clearAllState'], controller);
 
-  config[&#x27;ObjectStateController&#x27;] = controller;
+  config['ObjectStateController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5988,8 +5981,8 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">setPushController = function (controller) {
-  requireMethods(&#x27;PushController&#x27;, [&#x27;send&#x27;], controller);
-  config[&#x27;PushController&#x27;] = controller;
+  requireMethods('PushController', ['send'], controller);
+  config['PushController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -6009,8 +6002,8 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">setQueryController = function (controller) {
-  requireMethods(&#x27;QueryController&#x27;, [&#x27;find&#x27;], controller);
-  config[&#x27;QueryController&#x27;] = controller;
+  requireMethods('QueryController', ['find'], controller);
+  config['QueryController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -6030,8 +6023,8 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">setRESTController = function (controller) {
-  requireMethods(&#x27;RESTController&#x27;, [&#x27;request&#x27;, &#x27;ajax&#x27;], controller);
-  config[&#x27;RESTController&#x27;] = controller;
+  requireMethods('RESTController', ['request', 'ajax'], controller);
+  config['RESTController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -6051,8 +6044,8 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">setSessionController = function (controller) {
-  requireMethods(&#x27;SessionController&#x27;, [&#x27;getSession&#x27;], controller);
-  config[&#x27;SessionController&#x27;] = controller;
+  requireMethods('SessionController', ['getSession'], controller);
+  config['SessionController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -6073,11 +6066,11 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     <ul>
     <li>description and source-code<pre class="apidocCodePre">setStorageController = function (controller) {
   if (controller.async) {
-    requireMethods(&#x27;An async StorageController&#x27;, [&#x27;getItemAsync&#x27;, &#x27;setItemAsync&#x27;, &#x27;removeItemAsync&#x27;], controller);
+    requireMethods('An async StorageController', ['getItemAsync', 'setItemAsync', 'removeItemAsync'], controller);
   } else {
-    requireMethods(&#x27;A synchronous StorageController&#x27;, [&#x27;getItem&#x27;, &#x27;setItem&#x27;, &#x27;removeItem&#x27;], controller);
+    requireMethods('A synchronous StorageController', ['getItem', 'setItem', 'removeItem'], controller);
   }
-  config[&#x27;StorageController&#x27;] = controller;
+  config['StorageController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -6097,9 +6090,9 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">setUserController = function (controller) {
-  requireMethods(&#x27;UserController&#x27;, [&#x27;setCurrentUser&#x27;, &#x27;currentUser&#x27;, &#x27;currentUserAsync&#x27;, &#x27;signUp&#x27;, &#x27;logIn&#x27;, &#x27;become&#x27;, &#x27;logOut&#x27;, &#x27;
-requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWith&#x27;], controller);
-  config[&#x27;UserController&#x27;] = controller;
+  requireMethods('UserController', ['setCurrentUser', 'currentUser', 'currentUserAsync', 'signUp', 'logIn', 'become', 'logOut', '
+requestPasswordReset', 'upgradeToRevocableSession', 'linkWith'], controller);
+  config['UserController'] = controller;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -6252,8 +6245,8 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">init = function (options) {
-  if (typeof FB === &#x27;undefined&#x27;) {
-    throw new Error(&#x27;The Facebook JavaScript SDK must be loaded before calling init.&#x27;);
+  if (typeof FB === 'undefined') {
+    throw new Error('The Facebook JavaScript SDK must be loaded before calling init.');
   }
   initOptions = {};
   if (options) {
@@ -6261,10 +6254,10 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
       initOptions[key] = options[key];
     }
   }
-  if (initOptions.status &#x26;&#x26; typeof console !== &#x27;undefined&#x27;) {
+  if (initOptions.status &amp;&amp; typeof console !== 'undefined') {
     var warn = console.warn || console.log || function () {};
-    warn.call(console, &#x27;The &#x22;status&#x22; flag passed into&#x27; + &#x27; FB.init, when set to true, can interfere with Parse Facebook&#x27; + &#x27; integration
-, so it has been suppressed. Please call&#x27; + &#x27; FB.getLoginStatus() explicitly if you require this behavior.&#x27;);
+    warn.call(console, 'The "status" flag passed into' + ' FB.init, when set to true, can interfere with Parse Facebook' + ' integration
+, so it has been suppressed. Please call' + ' FB.getLoginStatus() explicitly if you require this behavior.');
   }
   initOptions.status = false;
   FB.init(initOptions);
@@ -6284,7 +6277,7 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">isLinked = function (user) {
-  return user._isLinked(&#x27;facebook&#x27;);
+  return user._isLinked('facebook');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -6299,12 +6292,12 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">link = function (user, permissions, options) {
-  if (!permissions || typeof permissions === &#x27;string&#x27;) {
+  if (!permissions || typeof permissions === 'string') {
     if (!initialized) {
-      throw new Error(&#x27;You must initialize FacebookUtils before calling link.&#x27;);
+      throw new Error('You must initialize FacebookUtils before calling link.');
     }
     requestedPermissions = permissions;
-    return user._linkWith(&#x27;facebook&#x27;, options);
+    return user._linkWith('facebook', options);
   } else {
     var newOptions = {};
     if (options) {
@@ -6313,7 +6306,7 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
       }
     }
     newOptions.authData = permissions;
-    return user._linkWith(&#x27;facebook&#x27;, newOptions);
+    return user._linkWith('facebook', newOptions);
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -6329,12 +6322,12 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">logIn = function (permissions, options) {
-  if (!permissions || typeof permissions === &#x27;string&#x27;) {
+  if (!permissions || typeof permissions === 'string') {
     if (!initialized) {
-      throw new Error(&#x27;You must initialize FacebookUtils before calling logIn.&#x27;);
+      throw new Error('You must initialize FacebookUtils before calling logIn.');
     }
     requestedPermissions = permissions;
-    return _ParseUser2.default._logInWith(&#x27;facebook&#x27;, options);
+    return _ParseUser2.default._logInWith('facebook', options);
   } else {
     var newOptions = {};
     if (options) {
@@ -6343,7 +6336,7 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
       }
     }
     newOptions.authData = permissions;
-    return _ParseUser2.default._logInWith(&#x27;facebook&#x27;, newOptions);
+    return _ParseUser2.default._logInWith('facebook', newOptions);
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -6360,9 +6353,9 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     <ul>
     <li>description and source-code<pre class="apidocCodePre">unlink = function (user, options) {
   if (!initialized) {
-    throw new Error(&#x27;You must initialize FacebookUtils before calling unlink.&#x27;);
+    throw new Error('You must initialize FacebookUtils before calling unlink.');
   }
-  return user._unlinkFrom(&#x27;facebook&#x27;, options);
+  return user._unlinkFrom('facebook', options);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -6382,8 +6375,8 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">init = function (options) {
-  if (typeof FB === &#x27;undefined&#x27;) {
-    throw new Error(&#x27;The Facebook JavaScript SDK must be loaded before calling init.&#x27;);
+  if (typeof FB === 'undefined') {
+    throw new Error('The Facebook JavaScript SDK must be loaded before calling init.');
   }
   initOptions = {};
   if (options) {
@@ -6391,10 +6384,10 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
       initOptions[key] = options[key];
     }
   }
-  if (initOptions.status &#x26;&#x26; typeof console !== &#x27;undefined&#x27;) {
+  if (initOptions.status &amp;&amp; typeof console !== 'undefined') {
     var warn = console.warn || console.log || function () {};
-    warn.call(console, &#x27;The &#x22;status&#x22; flag passed into&#x27; + &#x27; FB.init, when set to true, can interfere with Parse Facebook&#x27; + &#x27; integration
-, so it has been suppressed. Please call&#x27; + &#x27; FB.getLoginStatus() explicitly if you require this behavior.&#x27;);
+    warn.call(console, 'The "status" flag passed into' + ' FB.init, when set to true, can interfere with Parse Facebook' + ' integration
+, so it has been suppressed. Please call' + ' FB.getLoginStatus() explicitly if you require this behavior.');
   }
   initOptions.status = false;
   FB.init(initOptions);
@@ -6419,7 +6412,7 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">isLinked = function (user) {
-  return user._isLinked(&#x27;facebook&#x27;);
+  return user._isLinked('facebook');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -6439,12 +6432,12 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">link = function (user, permissions, options) {
-  if (!permissions || typeof permissions === &#x27;string&#x27;) {
+  if (!permissions || typeof permissions === 'string') {
     if (!initialized) {
-      throw new Error(&#x27;You must initialize FacebookUtils before calling link.&#x27;);
+      throw new Error('You must initialize FacebookUtils before calling link.');
     }
     requestedPermissions = permissions;
-    return user._linkWith(&#x27;facebook&#x27;, options);
+    return user._linkWith('facebook', options);
   } else {
     var newOptions = {};
     if (options) {
@@ -6453,7 +6446,7 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
       }
     }
     newOptions.authData = permissions;
-    return user._linkWith(&#x27;facebook&#x27;, newOptions);
+    return user._linkWith('facebook', newOptions);
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -6474,12 +6467,12 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">logIn = function (permissions, options) {
-  if (!permissions || typeof permissions === &#x27;string&#x27;) {
+  if (!permissions || typeof permissions === 'string') {
     if (!initialized) {
-      throw new Error(&#x27;You must initialize FacebookUtils before calling logIn.&#x27;);
+      throw new Error('You must initialize FacebookUtils before calling logIn.');
     }
     requestedPermissions = permissions;
-    return _ParseUser2.default._logInWith(&#x27;facebook&#x27;, options);
+    return _ParseUser2.default._logInWith('facebook', options);
   } else {
     var newOptions = {};
     if (options) {
@@ -6488,7 +6481,7 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
       }
     }
     newOptions.authData = permissions;
-    return _ParseUser2.default._logInWith(&#x27;facebook&#x27;, newOptions);
+    return _ParseUser2.default._logInWith('facebook', newOptions);
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -6510,9 +6503,9 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     <ul>
     <li>description and source-code<pre class="apidocCodePre">unlink = function (user, options) {
   if (!initialized) {
-    throw new Error(&#x27;You must initialize FacebookUtils before calling unlink.&#x27;);
+    throw new Error('You must initialize FacebookUtils before calling unlink.');
   }
-  return user._unlinkFrom(&#x27;facebook&#x27;, options);
+  return user._unlinkFrom('facebook', options);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -6534,44 +6527,44 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     <li>description and source-code<pre class="apidocCodePre">function ParseFile(name, data, type) {
   (0, _classCallCheck3.default)(this, ParseFile);
 
-  var specifiedType = type || &#x27;&#x27;;
+  var specifiedType = type || '';
 
   this._name = name;
 
   if (data !== undefined) {
     if (Array.isArray(data)) {
       this._source = {
-        format: &#x27;base64&#x27;,
+        format: 'base64',
         base64: ParseFile.encodeBase64(data),
         type: specifiedType
       };
-    } else if (typeof File !== &#x27;undefined&#x27; &#x26;&#x26; data instanceof File) {
+    } else if (typeof File !== 'undefined' &amp;&amp; data instanceof File) {
       this._source = {
-        format: &#x27;file&#x27;,
+        format: 'file',
         file: data,
         type: specifiedType
       };
-    } else if (data &#x26;&#x26; typeof data.base64 === &#x27;string&#x27;) {
+    } else if (data &amp;&amp; typeof data.base64 === 'string') {
       var _base = data.base64;
-      var commaIndex = _base.indexOf(&#x27;,&#x27;);
+      var commaIndex = _base.indexOf(',');
 
       if (commaIndex !== -1) {
         var matches = dataUriRegexp.exec(_base.slice(0, commaIndex + 1));
         // if data URI with type and charset, there will be 4 matches.
         this._source = {
-          format: &#x27;base64&#x27;,
+          format: 'base64',
           base64: _base.slice(commaIndex + 1),
           type: matches[1]
         };
       } else {
         this._source = {
-          format: &#x27;base64&#x27;,
+          format: 'base64',
           base64: _base,
           type: specifiedType
         };
       }
     } else {
-      throw new TypeError(&#x27;Cannot create a Parse.File with that data.&#x27;);
+      throw new TypeError('Cannot create a Parse.File with that data.');
     }
   }
 }</pre></li>
@@ -6599,11 +6592,11 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
     ParseGeoPoint._validate(arg1[0], arg1[1]);
     this._latitude = arg1[0];
     this._longitude = arg1[1];
-  } else if ((typeof arg1 === &#x27;undefined&#x27; ? &#x27;undefined&#x27; : (0, _typeof3.default)(arg1)) === &#x27;object&#x27;) {
+  } else if ((typeof arg1 === 'undefined' ? 'undefined' : (0, _typeof3.default)(arg1)) === 'object') {
     ParseGeoPoint._validate(arg1.latitude, arg1.longitude);
     this._latitude = arg1.latitude;
     this._longitude = arg1.longitude;
-  } else if (typeof arg1 === &#x27;number&#x27; &#x26;&#x26; typeof arg2 === &#x27;number&#x27;) {
+  } else if (typeof arg1 === 'number' &amp;&amp; typeof arg2 === 'number') {
     ParseGeoPoint._validate(arg1, arg2);
     this._latitude = arg1;
     this._longitude = arg2;
@@ -6633,11 +6626,11 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
   (0, _classCallCheck3.default)(this, Installation);
 
   var _this = (0, _possibleConstructorReturn3.default)(this, (Installation.__proto__ || (0, _getPrototypeOf2.default)(Installation
-)).call(this, &#x27;_Installation&#x27;));
+)).call(this, '_Installation'));
 
-  if (attributes &#x26;&#x26; (typeof attributes === &#x27;undefined&#x27; ? &#x27;undefined&#x27; : (0, _typeof3.default)(attributes)) === &#x27;object&#x27;) {
+  if (attributes &amp;&amp; (typeof attributes === 'undefined' ? 'undefined' : (0, _typeof3.default)(attributes)) === 'object') {
     if (!_this.set(attributes || {})) {
-      throw new Error(&#x27;Can\&#x27;t create an invalid Session&#x27;);
+      throw new Error('Can\'t create an invalid Session');
     }
   }
   return _this;
@@ -6775,8 +6768,8 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
   var _this = (0, _possibleConstructorReturn3.default)(this, (LiveQueryClient.__proto__ || (0, _getPrototypeOf2.default)(LiveQueryClient
 )).call(this));
 
-  if (!serverURL || serverURL.indexOf(&#x27;ws&#x27;) !== 0) {
-    throw new Error(&#x27;You need to set a proper Parse LiveQuery server url before using LiveQueryClient&#x27;);
+  if (!serverURL || serverURL.indexOf('ws') !== 0) {
+    throw new Error('You need to set a proper Parse LiveQuery server url before using LiveQueryClient');
   }
 
   _this.reconnectHandle = null;
@@ -6814,31 +6807,31 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
   (0, _classCallCheck3.default)(this, ParseObject);
 
   // Enable legacy initializers
-  if (typeof this.initialize === &#x27;function&#x27;) {
+  if (typeof this.initialize === 'function') {
     this.initialize.apply(this, arguments);
   }
 
   var toSet = null;
   this._objCount = objectCount++;
-  if (typeof className === &#x27;string&#x27;) {
+  if (typeof className === 'string') {
     this.className = className;
-    if (attributes &#x26;&#x26; (typeof attributes === &#x27;undefined&#x27; ? &#x27;undefined&#x27; : (0, _typeof3.default)(attributes)) === &#x27;object&#x27;) {
+    if (attributes &amp;&amp; (typeof attributes === 'undefined' ? 'undefined' : (0, _typeof3.default)(attributes)) === 'object') {
       toSet = attributes;
     }
-  } else if (className &#x26;&#x26; (typeof className === &#x27;undefined&#x27; ? &#x27;undefined&#x27; : (0, _typeof3.default)(className)) === &#x27;object&#x27;) {
+  } else if (className &amp;&amp; (typeof className === 'undefined' ? 'undefined' : (0, _typeof3.default)(className)) === 'object') {
     this.className = className.className;
     toSet = {};
     for (var attr in className) {
-      if (attr !== &#x27;className&#x27;) {
+      if (attr !== 'className') {
         toSet[attr] = className[attr];
       }
     }
-    if (attributes &#x26;&#x26; (typeof attributes === &#x27;undefined&#x27; ? &#x27;undefined&#x27; : (0, _typeof3.default)(attributes)) === &#x27;object&#x27;) {
+    if (attributes &amp;&amp; (typeof attributes === 'undefined' ? 'undefined' : (0, _typeof3.default)(attributes)) === 'object') {
       options = attributes;
     }
   }
-  if (toSet &#x26;&#x26; !this.set(toSet, options)) {
-    throw new Error(&#x27;Can\&#x27;t create an invalid Parse Object&#x27;);
+  if (toSet &amp;&amp; !this.set(toSet, options)) {
+    throw new Error('Can\'t create an invalid Parse Object');
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -6906,8 +6899,8 @@ requestPasswordReset&#x27;, &#x27;upgradeToRevocableSession&#x27;, &#x27;linkWit
   var _this3 = (0, _possibleConstructorReturn3.default)(this, (IncrementOp.__proto__ || (0, _getPrototypeOf2.default)(IncrementOp
 )).call(this));
 
-  if (typeof amount !== &#x27;number&#x27;) {
-    throw new TypeError(&#x27;Increment Op must be initialized with a numeric amount.&#x27;);
+  if (typeof amount !== 'number') {
+    throw new TypeError('Increment Op must be initialized with a numeric amount.');
   }
   _this3._amount = amount;
   return _this3;
@@ -7075,8 +7068,8 @@ call(this));
   var _this3 = (0, _possibleConstructorReturn3.default)(this, (IncrementOp.__proto__ || (0, _getPrototypeOf2.default)(IncrementOp
 )).call(this));
 
-  if (typeof amount !== &#x27;number&#x27;) {
-    throw new TypeError(&#x27;Increment Op must be initialized with a numeric amount.&#x27;);
+  if (typeof amount !== 'number') {
+    throw new TypeError('Increment Op must be initialized with a numeric amount.');
   }
   _this3._amount = amount;
   return _this3;
@@ -7214,7 +7207,7 @@ call(this));
   this._resolvedCallbacks = [];
   this._rejectedCallbacks = [];
 
-  if (typeof executor === &#x27;function&#x27;) {
+  if (typeof executor === 'function') {
     executor(this.resolve.bind(this), this.reject.bind(this));
   }
 }</pre></li>
@@ -7238,20 +7231,20 @@ call(this));
     <li>description and source-code<pre class="apidocCodePre">function send(data, options) {
   options = options || {};
 
-  if (data.where &#x26;&#x26; data.where instanceof _ParseQuery2.default) {
+  if (data.where &amp;&amp; data.where instanceof _ParseQuery2.default) {
     data.where = data.where.toJSON().where;
   }
 
-  if (data.push_time &#x26;&#x26; (0, _typeof3.default)(data.push_time) === &#x27;object&#x27;) {
+  if (data.push_time &amp;&amp; (0, _typeof3.default)(data.push_time) === 'object') {
     data.push_time = data.push_time.toJSON();
   }
 
-  if (data.expiration_time &#x26;&#x26; (0, _typeof3.default)(data.expiration_time) === &#x27;object&#x27;) {
+  if (data.expiration_time &amp;&amp; (0, _typeof3.default)(data.expiration_time) === 'object') {
     data.expiration_time = data.expiration_time.toJSON();
   }
 
-  if (data.expiration_time &#x26;&#x26; data.expiration_interval) {
-    throw new Error(&#x27;expiration_time and expiration_interval cannot both be set.&#x27;);
+  if (data.expiration_time &amp;&amp; data.expiration_interval) {
+    throw new Error('expiration_time and expiration_interval cannot both be set.');
   }
 
   return _CoreManager2.default.getPushController().send(data, {
@@ -7278,20 +7271,20 @@ call(this));
     <li>description and source-code<pre class="apidocCodePre">function send(data, options) {
   options = options || {};
 
-  if (data.where &#x26;&#x26; data.where instanceof _ParseQuery2.default) {
+  if (data.where &amp;&amp; data.where instanceof _ParseQuery2.default) {
     data.where = data.where.toJSON().where;
   }
 
-  if (data.push_time &#x26;&#x26; (0, _typeof3.default)(data.push_time) === &#x27;object&#x27;) {
+  if (data.push_time &amp;&amp; (0, _typeof3.default)(data.push_time) === 'object') {
     data.push_time = data.push_time.toJSON();
   }
 
-  if (data.expiration_time &#x26;&#x26; (0, _typeof3.default)(data.expiration_time) === &#x27;object&#x27;) {
+  if (data.expiration_time &amp;&amp; (0, _typeof3.default)(data.expiration_time) === 'object') {
     data.expiration_time = data.expiration_time.toJSON();
   }
 
-  if (data.expiration_time &#x26;&#x26; data.expiration_interval) {
-    throw new Error(&#x27;expiration_time and expiration_interval cannot both be set.&#x27;);
+  if (data.expiration_time &amp;&amp; data.expiration_interval) {
+    throw new Error('expiration_time and expiration_interval cannot both be set.');
   }
 
   return _CoreManager2.default.getPushController().send(data, {
@@ -7318,23 +7311,23 @@ call(this));
     <li>description and source-code<pre class="apidocCodePre">function ParseQuery(objectClass) {
   (0, _classCallCheck3.default)(this, ParseQuery);
 
-  if (typeof objectClass === &#x27;string&#x27;) {
-    if (objectClass === &#x27;User&#x27; &#x26;&#x26; _CoreManager2.default.get(&#x27;PERFORM_USER_REWRITE&#x27;)) {
-      this.className = &#x27;_User&#x27;;
+  if (typeof objectClass === 'string') {
+    if (objectClass === 'User' &amp;&amp; _CoreManager2.default.get('PERFORM_USER_REWRITE')) {
+      this.className = '_User';
     } else {
       this.className = objectClass;
     }
   } else if (objectClass instanceof _ParseObject2.default) {
     this.className = objectClass.className;
-  } else if (typeof objectClass === &#x27;function&#x27;) {
-    if (typeof objectClass.className === &#x27;string&#x27;) {
+  } else if (typeof objectClass === 'function') {
+    if (typeof objectClass.className === 'string') {
       this.className = objectClass.className;
     } else {
       var obj = new objectClass();
       this.className = obj.className;
     }
   } else {
-    throw new TypeError(&#x27;A ParseQuery must be constructed with a ParseObject or class name.&#x27;);
+    throw new TypeError('A ParseQuery must be constructed with a ParseObject or class name.');
   }
 
   this._where = {};
@@ -7388,9 +7381,9 @@ call(this));
   (0, _classCallCheck3.default)(this, ParseRole);
 
   var _this = (0, _possibleConstructorReturn3.default)(this, (ParseRole.__proto__ || (0, _getPrototypeOf2.default)(ParseRole)).call
-(this, &#x27;_Role&#x27;));
+(this, '_Role'));
 
-  if (typeof name === &#x27;string&#x27; &#x26;&#x26; acl instanceof _ParseACL2.default) {
+  if (typeof name === 'string' &amp;&amp; acl instanceof _ParseACL2.default) {
     _this.setName(name);
     _this.setACL(acl);
   }
@@ -7419,11 +7412,11 @@ call(this));
   (0, _classCallCheck3.default)(this, ParseSession);
 
   var _this = (0, _possibleConstructorReturn3.default)(this, (ParseSession.__proto__ || (0, _getPrototypeOf2.default)(ParseSession
-)).call(this, &#x27;_Session&#x27;));
+)).call(this, '_Session'));
 
-  if (attributes &#x26;&#x26; (typeof attributes === &#x27;undefined&#x27; ? &#x27;undefined&#x27; : (0, _typeof3.default)(attributes)) === &#x27;object&#x27;) {
+  if (attributes &amp;&amp; (typeof attributes === 'undefined' ? 'undefined' : (0, _typeof3.default)(attributes)) === 'object') {
     if (!_this.set(attributes || {})) {
-      throw new Error(&#x27;Can\&#x27;t create an invalid Session&#x27;);
+      throw new Error('Can\'t create an invalid Session');
     }
   }
   return _this;
@@ -7449,7 +7442,7 @@ call(this));
     <ul>
     <li>description and source-code<pre class="apidocCodePre">_clear = function () {
   var controller = _CoreManager2.default.getStorageController();
-  if (controller.hasOwnProperty(&#x27;clear&#x27;)) {
+  if (controller.hasOwnProperty('clear')) {
     controller.clear();
   }
 }</pre></li>
@@ -7482,16 +7475,16 @@ call(this));
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">generatePath = function (path) {
-  if (!_CoreManager2.default.get(&#x27;APPLICATION_ID&#x27;)) {
-    throw new Error(&#x27;You need to call Parse.initialize before using Parse.&#x27;);
+  if (!_CoreManager2.default.get('APPLICATION_ID')) {
+    throw new Error('You need to call Parse.initialize before using Parse.');
   }
-  if (typeof path !== &#x27;string&#x27;) {
-    throw new Error(&#x27;Tried to get a Storage path that was not a String.&#x27;);
+  if (typeof path !== 'string') {
+    throw new Error('Tried to get a Storage path that was not a String.');
   }
-  if (path[0] === &#x27;/&#x27;) {
+  if (path[0] === '/') {
     path = path.substr(1);
   }
-  return &#x27;Parse/&#x27; + _CoreManager2.default.get(&#x27;APPLICATION_ID&#x27;) + &#x27;/&#x27; + path;
+  return 'Parse/' + _CoreManager2.default.get('APPLICATION_ID') + '/' + path;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -7508,7 +7501,7 @@ call(this));
     <li>description and source-code<pre class="apidocCodePre">getItem = function (path) {
   var controller = _CoreManager2.default.getStorageController();
   if (controller.async === 1) {
-    throw new Error(&#x27;Synchronous storage is not supported by the current storage controller&#x27;);
+    throw new Error('Synchronous storage is not supported by the current storage controller');
   }
   return controller.getItem(path);
 }</pre></li>
@@ -7546,7 +7539,7 @@ call(this));
     <li>description and source-code<pre class="apidocCodePre">removeItem = function (path) {
   var controller = _CoreManager2.default.getStorageController();
   if (controller.async === 1) {
-    throw new Error(&#x27;Synchronous storage is not supported by the current storage controller&#x27;);
+    throw new Error('Synchronous storage is not supported by the current storage controller');
   }
   return controller.removeItem(path);
 }</pre></li>
@@ -7584,7 +7577,7 @@ call(this));
     <li>description and source-code<pre class="apidocCodePre">setItem = function (path, value) {
   var controller = _CoreManager2.default.getStorageController();
   if (controller.async === 1) {
-    throw new Error(&#x27;Synchronous storage is not supported by the current storage controller&#x27;);
+    throw new Error('Synchronous storage is not supported by the current storage controller');
   }
   return controller.setItem(path, value);
 }</pre></li>
@@ -7626,7 +7619,7 @@ call(this));
     <ul>
     <li>description and source-code<pre class="apidocCodePre">_clear = function () {
   var controller = _CoreManager2.default.getStorageController();
-  if (controller.hasOwnProperty(&#x27;clear&#x27;)) {
+  if (controller.hasOwnProperty('clear')) {
     controller.clear();
   }
 }</pre></li>
@@ -7669,16 +7662,16 @@ call(this));
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">generatePath = function (path) {
-  if (!_CoreManager2.default.get(&#x27;APPLICATION_ID&#x27;)) {
-    throw new Error(&#x27;You need to call Parse.initialize before using Parse.&#x27;);
+  if (!_CoreManager2.default.get('APPLICATION_ID')) {
+    throw new Error('You need to call Parse.initialize before using Parse.');
   }
-  if (typeof path !== &#x27;string&#x27;) {
-    throw new Error(&#x27;Tried to get a Storage path that was not a String.&#x27;);
+  if (typeof path !== 'string') {
+    throw new Error('Tried to get a Storage path that was not a String.');
   }
-  if (path[0] === &#x27;/&#x27;) {
+  if (path[0] === '/') {
     path = path.substr(1);
   }
-  return &#x27;Parse/&#x27; + _CoreManager2.default.get(&#x27;APPLICATION_ID&#x27;) + &#x27;/&#x27; + path;
+  return 'Parse/' + _CoreManager2.default.get('APPLICATION_ID') + '/' + path;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -7700,7 +7693,7 @@ call(this));
     <li>description and source-code<pre class="apidocCodePre">getItem = function (path) {
   var controller = _CoreManager2.default.getStorageController();
   if (controller.async === 1) {
-    throw new Error(&#x27;Synchronous storage is not supported by the current storage controller&#x27;);
+    throw new Error('Synchronous storage is not supported by the current storage controller');
   }
   return controller.getItem(path);
 }</pre></li>
@@ -7748,7 +7741,7 @@ call(this));
     <li>description and source-code<pre class="apidocCodePre">removeItem = function (path) {
   var controller = _CoreManager2.default.getStorageController();
   if (controller.async === 1) {
-    throw new Error(&#x27;Synchronous storage is not supported by the current storage controller&#x27;);
+    throw new Error('Synchronous storage is not supported by the current storage controller');
   }
   return controller.removeItem(path);
 }</pre></li>
@@ -7796,7 +7789,7 @@ call(this));
     <li>description and source-code<pre class="apidocCodePre">setItem = function (path, value) {
   var controller = _CoreManager2.default.getStorageController();
   if (controller.async === 1) {
-    throw new Error(&#x27;Synchronous storage is not supported by the current storage controller&#x27;);
+    throw new Error('Synchronous storage is not supported by the current storage controller');
   }
   return controller.setItem(path, value);
 }</pre></li>
@@ -7845,11 +7838,11 @@ call(this));
   (0, _classCallCheck3.default)(this, ParseUser);
 
   var _this = (0, _possibleConstructorReturn3.default)(this, (ParseUser.__proto__ || (0, _getPrototypeOf2.default)(ParseUser)).call
-(this, &#x27;_User&#x27;));
+(this, '_User'));
 
-  if (attributes &#x26;&#x26; (typeof attributes === &#x27;undefined&#x27; ? &#x27;undefined&#x27; : (0, _typeof3.default)(attributes)) === &#x27;object&#x27;) {
+  if (attributes &amp;&amp; (typeof attributes === 'undefined' ? 'undefined' : (0, _typeof3.default)(attributes)) === 'object') {
     if (!_this.set(attributes || {})) {
-      throw new Error(&#x27;Can\&#x27;t create an invalid Parse User&#x27;);
+      throw new Error('Can\'t create an invalid Parse User');
     }
   }
   return _this;
@@ -7874,7 +7867,7 @@ call(this));
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">_ajax = function () {
-  for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 &#x3c; _len2; _key2++) {
+  for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 &lt; _len2; _key2++) {
     args[_key2] = arguments[_key2];
   }
 
@@ -7958,10 +7951,10 @@ call(this));
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">_initialize = function (applicationId, javaScriptKey, masterKey) {
-  _CoreManager2.default.set(&#x27;APPLICATION_ID&#x27;, applicationId);
-  _CoreManager2.default.set(&#x27;JAVASCRIPT_KEY&#x27;, javaScriptKey);
-  _CoreManager2.default.set(&#x27;MASTER_KEY&#x27;, masterKey);
-  _CoreManager2.default.set(&#x27;USE_MASTER_KEY&#x27;, false);
+  _CoreManager2.default.set('APPLICATION_ID', applicationId);
+  _CoreManager2.default.set('JAVASCRIPT_KEY', javaScriptKey);
+  _CoreManager2.default.set('MASTER_KEY', masterKey);
+  _CoreManager2.default.set('USE_MASTER_KEY', false);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -7981,7 +7974,7 @@ call(this));
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">_request = function () {
-  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &lt; _len; _key++) {
     args[_key] = arguments[_key];
   }
 
@@ -8005,9 +7998,9 @@ call(this));
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">initialize = function (applicationId, javaScriptKey) {
-  if (&#x27;browser&#x27; === &#x27;browser&#x27; &#x26;&#x26; _CoreManager2.default.get(&#x27;IS_NODE&#x27;)) {
-    console.log(&#x27;It looks like you\&#x27;re using the browser version of the SDK in a &#x27; + &#x27;node.js environment. You should require(\&#x27;
-parse/node\&#x27;) instead.&#x27;);
+  if ('browser' === 'browser' &amp;&amp; _CoreManager2.default.get('IS_NODE')) {
+    console.log('It looks like you\'re using the browser version of the SDK in a ' + 'node.js environment. You should require(\'
+parse/node\') instead.');
   }
   Parse._initialize(applicationId, javaScriptKey);
 }</pre></li>
@@ -8032,31 +8025,31 @@ parse/node\&#x27;) instead.&#x27;);
   (0, _classCallCheck3.default)(this, ParseACL);
 
   this.permissionsById = {};
-  if (arg1 &#x26;&#x26; (typeof arg1 === &#x27;undefined&#x27; ? &#x27;undefined&#x27; : (0, _typeof3.default)(arg1)) === &#x27;object&#x27;) {
+  if (arg1 &amp;&amp; (typeof arg1 === 'undefined' ? 'undefined' : (0, _typeof3.default)(arg1)) === 'object') {
     if (arg1 instanceof _ParseUser2.default) {
       this.setReadAccess(arg1, true);
       this.setWriteAccess(arg1, true);
     } else {
       for (var userId in arg1) {
         var accessList = arg1[userId];
-        if (typeof userId !== &#x27;string&#x27;) {
-          throw new TypeError(&#x27;Tried to create an ACL with an invalid user id.&#x27;);
+        if (typeof userId !== 'string') {
+          throw new TypeError('Tried to create an ACL with an invalid user id.');
         }
         this.permissionsById[userId] = {};
         for (var permission in accessList) {
           var allowed = accessList[permission];
-          if (permission !== &#x27;read&#x27; &#x26;&#x26; permission !== &#x27;write&#x27;) {
-            throw new TypeError(&#x27;Tried to create an ACL with an invalid permission type.&#x27;);
+          if (permission !== 'read' &amp;&amp; permission !== 'write') {
+            throw new TypeError('Tried to create an ACL with an invalid permission type.');
           }
-          if (typeof allowed !== &#x27;boolean&#x27;) {
-            throw new TypeError(&#x27;Tried to create an ACL with an invalid permission value.&#x27;);
+          if (typeof allowed !== 'boolean') {
+            throw new TypeError('Tried to create an ACL with an invalid permission value.');
           }
           this.permissionsById[userId][permission] = allowed;
         }
       }
     }
-  } else if (typeof arg1 === &#x27;function&#x27;) {
-    throw new TypeError(&#x27;ParseACL constructed with a function. Did you forget ()?&#x27;);
+  } else if (typeof arg1 === 'function') {
+    throw new TypeError('ParseACL constructed with a function. Did you forget ()?');
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -8110,44 +8103,44 @@ parse/node\&#x27;) instead.&#x27;);
     <li>description and source-code<pre class="apidocCodePre">function ParseFile(name, data, type) {
   (0, _classCallCheck3.default)(this, ParseFile);
 
-  var specifiedType = type || &#x27;&#x27;;
+  var specifiedType = type || '';
 
   this._name = name;
 
   if (data !== undefined) {
     if (Array.isArray(data)) {
       this._source = {
-        format: &#x27;base64&#x27;,
+        format: 'base64',
         base64: ParseFile.encodeBase64(data),
         type: specifiedType
       };
-    } else if (typeof File !== &#x27;undefined&#x27; &#x26;&#x26; data instanceof File) {
+    } else if (typeof File !== 'undefined' &amp;&amp; data instanceof File) {
       this._source = {
-        format: &#x27;file&#x27;,
+        format: 'file',
         file: data,
         type: specifiedType
       };
-    } else if (data &#x26;&#x26; typeof data.base64 === &#x27;string&#x27;) {
+    } else if (data &amp;&amp; typeof data.base64 === 'string') {
       var _base = data.base64;
-      var commaIndex = _base.indexOf(&#x27;,&#x27;);
+      var commaIndex = _base.indexOf(',');
 
       if (commaIndex !== -1) {
         var matches = dataUriRegexp.exec(_base.slice(0, commaIndex + 1));
         // if data URI with type and charset, there will be 4 matches.
         this._source = {
-          format: &#x27;base64&#x27;,
+          format: 'base64',
           base64: _base.slice(commaIndex + 1),
           type: matches[1]
         };
       } else {
         this._source = {
-          format: &#x27;base64&#x27;,
+          format: 'base64',
           base64: _base,
           type: specifiedType
         };
       }
     } else {
-      throw new TypeError(&#x27;Cannot create a Parse.File with that data.&#x27;);
+      throw new TypeError('Cannot create a Parse.File with that data.');
     }
   }
 }</pre></li>
@@ -8170,11 +8163,11 @@ parse/node\&#x27;) instead.&#x27;);
     ParseGeoPoint._validate(arg1[0], arg1[1]);
     this._latitude = arg1[0];
     this._longitude = arg1[1];
-  } else if ((typeof arg1 === &#x27;undefined&#x27; ? &#x27;undefined&#x27; : (0, _typeof3.default)(arg1)) === &#x27;object&#x27;) {
+  } else if ((typeof arg1 === 'undefined' ? 'undefined' : (0, _typeof3.default)(arg1)) === 'object') {
     ParseGeoPoint._validate(arg1.latitude, arg1.longitude);
     this._latitude = arg1.latitude;
     this._longitude = arg1.longitude;
-  } else if (typeof arg1 === &#x27;number&#x27; &#x26;&#x26; typeof arg2 === &#x27;number&#x27;) {
+  } else if (typeof arg1 === 'number' &amp;&amp; typeof arg2 === 'number') {
     ParseGeoPoint._validate(arg1, arg2);
     this._latitude = arg1;
     this._longitude = arg2;
@@ -8199,11 +8192,11 @@ parse/node\&#x27;) instead.&#x27;);
   (0, _classCallCheck3.default)(this, Installation);
 
   var _this = (0, _possibleConstructorReturn3.default)(this, (Installation.__proto__ || (0, _getPrototypeOf2.default)(Installation
-)).call(this, &#x27;_Installation&#x27;));
+)).call(this, '_Installation'));
 
-  if (attributes &#x26;&#x26; (typeof attributes === &#x27;undefined&#x27; ? &#x27;undefined&#x27; : (0, _typeof3.default)(attributes)) === &#x27;object&#x27;) {
+  if (attributes &amp;&amp; (typeof attributes === 'undefined' ? 'undefined' : (0, _typeof3.default)(attributes)) === 'object') {
     if (!_this.set(attributes || {})) {
-      throw new Error(&#x27;Can\&#x27;t create an invalid Session&#x27;);
+      throw new Error('Can\'t create an invalid Session');
     }
   }
   return _this;
@@ -8231,8 +8224,8 @@ parse/node\&#x27;) instead.&#x27;);
   var _this = (0, _possibleConstructorReturn3.default)(this, (LiveQueryClient.__proto__ || (0, _getPrototypeOf2.default)(LiveQueryClient
 )).call(this));
 
-  if (!serverURL || serverURL.indexOf(&#x27;ws&#x27;) !== 0) {
-    throw new Error(&#x27;You need to set a proper Parse LiveQuery server url before using LiveQueryClient&#x27;);
+  if (!serverURL || serverURL.indexOf('ws') !== 0) {
+    throw new Error('You need to set a proper Parse LiveQuery server url before using LiveQueryClient');
   }
 
   _this.reconnectHandle = null;
@@ -8265,31 +8258,31 @@ parse/node\&#x27;) instead.&#x27;);
   (0, _classCallCheck3.default)(this, ParseObject);
 
   // Enable legacy initializers
-  if (typeof this.initialize === &#x27;function&#x27;) {
+  if (typeof this.initialize === 'function') {
     this.initialize.apply(this, arguments);
   }
 
   var toSet = null;
   this._objCount = objectCount++;
-  if (typeof className === &#x27;string&#x27;) {
+  if (typeof className === 'string') {
     this.className = className;
-    if (attributes &#x26;&#x26; (typeof attributes === &#x27;undefined&#x27; ? &#x27;undefined&#x27; : (0, _typeof3.default)(attributes)) === &#x27;object&#x27;) {
+    if (attributes &amp;&amp; (typeof attributes === 'undefined' ? 'undefined' : (0, _typeof3.default)(attributes)) === 'object') {
       toSet = attributes;
     }
-  } else if (className &#x26;&#x26; (typeof className === &#x27;undefined&#x27; ? &#x27;undefined&#x27; : (0, _typeof3.default)(className)) === &#x27;object&#x27;) {
+  } else if (className &amp;&amp; (typeof className === 'undefined' ? 'undefined' : (0, _typeof3.default)(className)) === 'object') {
     this.className = className.className;
     toSet = {};
     for (var attr in className) {
-      if (attr !== &#x27;className&#x27;) {
+      if (attr !== 'className') {
         toSet[attr] = className[attr];
       }
     }
-    if (attributes &#x26;&#x26; (typeof attributes === &#x27;undefined&#x27; ? &#x27;undefined&#x27; : (0, _typeof3.default)(attributes)) === &#x27;object&#x27;) {
+    if (attributes &amp;&amp; (typeof attributes === 'undefined' ? 'undefined' : (0, _typeof3.default)(attributes)) === 'object') {
       options = attributes;
     }
   }
-  if (toSet &#x26;&#x26; !this.set(toSet, options)) {
-    throw new Error(&#x27;Can\&#x27;t create an invalid Parse Object&#x27;);
+  if (toSet &amp;&amp; !this.set(toSet, options)) {
+    throw new Error('Can\'t create an invalid Parse Object');
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -8312,7 +8305,7 @@ parse/node\&#x27;) instead.&#x27;);
   this._resolvedCallbacks = [];
   this._rejectedCallbacks = [];
 
-  if (typeof executor === &#x27;function&#x27;) {
+  if (typeof executor === 'function') {
     executor(this.resolve.bind(this), this.reject.bind(this));
   }
 }</pre></li>
@@ -8331,23 +8324,23 @@ parse/node\&#x27;) instead.&#x27;);
     <li>description and source-code<pre class="apidocCodePre">function ParseQuery(objectClass) {
   (0, _classCallCheck3.default)(this, ParseQuery);
 
-  if (typeof objectClass === &#x27;string&#x27;) {
-    if (objectClass === &#x27;User&#x27; &#x26;&#x26; _CoreManager2.default.get(&#x27;PERFORM_USER_REWRITE&#x27;)) {
-      this.className = &#x27;_User&#x27;;
+  if (typeof objectClass === 'string') {
+    if (objectClass === 'User' &amp;&amp; _CoreManager2.default.get('PERFORM_USER_REWRITE')) {
+      this.className = '_User';
     } else {
       this.className = objectClass;
     }
   } else if (objectClass instanceof _ParseObject2.default) {
     this.className = objectClass.className;
-  } else if (typeof objectClass === &#x27;function&#x27;) {
-    if (typeof objectClass.className === &#x27;string&#x27;) {
+  } else if (typeof objectClass === 'function') {
+    if (typeof objectClass.className === 'string') {
       this.className = objectClass.className;
     } else {
       var obj = new objectClass();
       this.className = obj.className;
     }
   } else {
-    throw new TypeError(&#x27;A ParseQuery must be constructed with a ParseObject or class name.&#x27;);
+    throw new TypeError('A ParseQuery must be constructed with a ParseObject or class name.');
   }
 
   this._where = {};
@@ -8391,9 +8384,9 @@ parse/node\&#x27;) instead.&#x27;);
   (0, _classCallCheck3.default)(this, ParseRole);
 
   var _this = (0, _possibleConstructorReturn3.default)(this, (ParseRole.__proto__ || (0, _getPrototypeOf2.default)(ParseRole)).call
-(this, &#x27;_Role&#x27;));
+(this, '_Role'));
 
-  if (typeof name === &#x27;string&#x27; &#x26;&#x26; acl instanceof _ParseACL2.default) {
+  if (typeof name === 'string' &amp;&amp; acl instanceof _ParseACL2.default) {
     _this.setName(name);
     _this.setACL(acl);
   }
@@ -8415,11 +8408,11 @@ parse/node\&#x27;) instead.&#x27;);
   (0, _classCallCheck3.default)(this, ParseSession);
 
   var _this = (0, _possibleConstructorReturn3.default)(this, (ParseSession.__proto__ || (0, _getPrototypeOf2.default)(ParseSession
-)).call(this, &#x27;_Session&#x27;));
+)).call(this, '_Session'));
 
-  if (attributes &#x26;&#x26; (typeof attributes === &#x27;undefined&#x27; ? &#x27;undefined&#x27; : (0, _typeof3.default)(attributes)) === &#x27;object&#x27;) {
+  if (attributes &amp;&amp; (typeof attributes === 'undefined' ? 'undefined' : (0, _typeof3.default)(attributes)) === 'object') {
     if (!_this.set(attributes || {})) {
-      throw new Error(&#x27;Can\&#x27;t create an invalid Session&#x27;);
+      throw new Error('Can\'t create an invalid Session');
     }
   }
   return _this;
@@ -8440,11 +8433,11 @@ parse/node\&#x27;) instead.&#x27;);
   (0, _classCallCheck3.default)(this, ParseUser);
 
   var _this = (0, _possibleConstructorReturn3.default)(this, (ParseUser.__proto__ || (0, _getPrototypeOf2.default)(ParseUser)).call
-(this, &#x27;_User&#x27;));
+(this, '_User'));
 
-  if (attributes &#x26;&#x26; (typeof attributes === &#x27;undefined&#x27; ? &#x27;undefined&#x27; : (0, _typeof3.default)(attributes)) === &#x27;object&#x27;) {
+  if (attributes &amp;&amp; (typeof attributes === 'undefined' ? 'undefined' : (0, _typeof3.default)(attributes)) === 'object') {
     if (!_this.set(attributes || {})) {
-      throw new Error(&#x27;Can\&#x27;t create an invalid Parse User&#x27;);
+      throw new Error('Can\'t create an invalid Parse User');
     }
   }
   return _this;
@@ -8462,7 +8455,7 @@ parse/node\&#x27;) instead.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">_ajax = function () {
-  for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 &#x3c; _len2; _key2++) {
+  for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 &lt; _len2; _key2++) {
     args[_key2] = arguments[_key2];
   }
 
@@ -8526,10 +8519,10 @@ parse/node\&#x27;) instead.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">_initialize = function (applicationId, javaScriptKey, masterKey) {
-  _CoreManager2.default.set(&#x27;APPLICATION_ID&#x27;, applicationId);
-  _CoreManager2.default.set(&#x27;JAVASCRIPT_KEY&#x27;, javaScriptKey);
-  _CoreManager2.default.set(&#x27;MASTER_KEY&#x27;, masterKey);
-  _CoreManager2.default.set(&#x27;USE_MASTER_KEY&#x27;, false);
+  _CoreManager2.default.set('APPLICATION_ID', applicationId);
+  _CoreManager2.default.set('JAVASCRIPT_KEY', javaScriptKey);
+  _CoreManager2.default.set('MASTER_KEY', masterKey);
+  _CoreManager2.default.set('USE_MASTER_KEY', false);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -8544,7 +8537,7 @@ parse/node\&#x27;) instead.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">_request = function () {
-  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &lt; _len; _key++) {
     args[_key] = arguments[_key];
   }
 
@@ -8563,10 +8556,10 @@ parse/node\&#x27;) instead.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">initialize = function (applicationId, javaScriptKey, masterKey) {
-  _CoreManager2.default.set(&#x27;APPLICATION_ID&#x27;, applicationId);
-  _CoreManager2.default.set(&#x27;JAVASCRIPT_KEY&#x27;, javaScriptKey);
-  _CoreManager2.default.set(&#x27;MASTER_KEY&#x27;, masterKey);
-  _CoreManager2.default.set(&#x27;USE_MASTER_KEY&#x27;, false);
+  _CoreManager2.default.set('APPLICATION_ID', applicationId);
+  _CoreManager2.default.set('JAVASCRIPT_KEY', javaScriptKey);
+  _CoreManager2.default.set('MASTER_KEY', masterKey);
+  _CoreManager2.default.set('USE_MASTER_KEY', false);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -8600,3 +8593,4 @@ parse/node\&#x27;) instead.&#x27;);
     ]
 </div>
 </div>
+</body></html>
