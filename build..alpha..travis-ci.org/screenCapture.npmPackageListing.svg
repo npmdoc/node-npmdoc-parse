@@ -1,153 +1,153 @@
 <svg height="2398" width="720" xmlns="http://www.w3.org/2000/svg">
 <rect height="2398" fill="#555" width="720"></rect>
 <text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
-<tspan x="10" y="26">  0.  2017-04-17 21:00:49 +0000  1624398 bytes  .</tspan>
-<tspan x="10" y="42">  1.  2017-04-17 21:00:49 +0000     1534 bytes  LICENSE</tspan>
-<tspan x="10" y="58">  2.  2017-04-17 21:00:49 +0000     1966 bytes  PATENTS</tspan>
-<tspan x="10" y="74">  3.  2017-04-17 21:00:49 +0000     2825 bytes  README.md</tspan>
-<tspan x="10" y="90">  4.  2017-04-17 21:00:49 +0000   445506 bytes  dist/parse.js</tspan>
-<tspan x="10" y="106">  5.  2017-04-17 21:00:49 +0000   167412 bytes  dist/parse.min.js</tspan>
-<tspan x="10" y="122">  6.  2017-04-17 21:00:49 +0000       52 bytes  index.js</tspan>
-<tspan x="10" y="138">  7.  2017-04-17 21:00:49 +0000     2660 bytes  lib/browser/Analytics.js</tspan>
-<tspan x="10" y="154">  8.  2017-04-17 21:00:49 +0000     3382 bytes  lib/browser/Cloud.js</tspan>
-<tspan x="10" y="170">  9.  2017-04-17 21:00:49 +0000     5706 bytes  lib/browser/CoreManager.js</tspan>
-<tspan x="10" y="186"> 10.  2017-04-17 21:00:49 +0000      475 bytes  lib/browser/EventEmitter.js</tspan>
-<tspan x="10" y="202"> 11.  2017-04-17 21:00:49 +0000     8037 bytes  lib/browser/FacebookUtils.js</tspan>
-<tspan x="10" y="218"> 12.  2017-04-17 21:00:49 +0000     1918 bytes  lib/browser/InstallationController.js</tspan>
-<tspan x="10" y="234"> 13.  2017-04-17 21:00:49 +0000    18038 bytes  lib/browser/LiveQueryClient.js</tspan>
-<tspan x="10" y="250"> 14.  2017-04-17 21:00:49 +0000     5069 bytes  lib/browser/LiveQuerySubscription.js</tspan>
-<tspan x="10" y="266"> 15.  2017-04-17 21:00:49 +0000     4514 bytes  lib/browser/ObjectStateMutations.js</tspan>
-<tspan x="10" y="282"> 16.  2017-04-17 21:00:49 +0000     6098 bytes  lib/browser/Parse.js</tspan>
-<tspan x="10" y="298"> 17.  2017-04-17 21:00:49 +0000    12253 bytes  lib/browser/ParseACL.js</tspan>
-<tspan x="10" y="314"> 18.  2017-04-17 21:00:49 +0000     6202 bytes  lib/browser/ParseConfig.js</tspan>
-<tspan x="10" y="330"> 19.  2017-04-17 21:00:49 +0000    11268 bytes  lib/browser/ParseError.js</tspan>
-<tspan x="10" y="346"> 20.  2017-04-17 21:00:49 +0000     8735 bytes  lib/browser/ParseFile.js</tspan>
-<tspan x="10" y="362"> 21.  2017-04-17 21:00:49 +0000     7026 bytes  lib/browser/ParseGeoPoint.js</tspan>
-<tspan x="10" y="378"> 22.  2017-04-17 21:00:49 +0000     4879 bytes  lib/browser/ParseHooks.js</tspan>
-<tspan x="10" y="394"> 23.  2017-04-17 21:00:49 +0000     2302 bytes  lib/browser/ParseInstallation.js</tspan>
-<tspan x="10" y="410"> 24.  2017-04-17 21:00:49 +0000     7577 bytes  lib/browser/ParseLiveQuery.js</tspan>
-<tspan x="10" y="426"> 25.  2017-04-17 21:00:49 +0000    64028 bytes  lib/browser/ParseObject.js</tspan>
-<tspan x="10" y="442"> 26.  2017-04-17 21:00:49 +0000    17344 bytes  lib/browser/ParseOp.js</tspan>
-<tspan x="10" y="458"> 27.  2017-04-17 21:00:49 +0000    22270 bytes  lib/browser/ParsePromise.js</tspan>
-<tspan x="10" y="474"> 28.  2017-04-17 21:00:49 +0000    39028 bytes  lib/browser/ParseQuery.js</tspan>
-<tspan x="10" y="490"> 29.  2017-04-17 21:00:49 +0000     5024 bytes  lib/browser/ParseRelation.js</tspan>
-<tspan x="10" y="506"> 30.  2017-04-17 21:00:49 +0000     6636 bytes  lib/browser/ParseRole.js</tspan>
-<tspan x="10" y="522"> 31.  2017-04-17 21:00:49 +0000     5769 bytes  lib/browser/ParseSession.js</tspan>
-<tspan x="10" y="538"> 32.  2017-04-17 21:00:49 +0000    36424 bytes  lib/browser/ParseUser.js</tspan>
-<tspan x="10" y="554"> 33.  2017-04-17 21:00:49 +0000     2989 bytes  lib/browser/Push.js</tspan>
-<tspan x="10" y="570"> 34.  2017-04-17 21:00:49 +0000     7676 bytes  lib/browser/RESTController.js</tspan>
-<tspan x="10" y="586"> 35.  2017-04-17 21:00:49 +0000     4364 bytes  lib/browser/SingleInstanceStateController.js</tspan>
-<tspan x="10" y="602"> 36.  2017-04-17 21:00:49 +0000     3126 bytes  lib/browser/Storage.js</tspan>
-<tspan x="10" y="618"> 37.  2017-04-17 21:00:49 +0000     1025 bytes  lib/browser/StorageController.browser.js</tspan>
-<tspan x="10" y="634"> 38.  2017-04-17 21:00:49 +0000      901 bytes  lib/browser/StorageController.default.js</tspan>
-<tspan x="10" y="650"> 39.  2017-04-17 21:00:49 +0000     1571 bytes  lib/browser/StorageController.react-native.js</tspan>
-<tspan x="10" y="666"> 40.  2017-04-17 21:00:49 +0000     1986 bytes  lib/browser/TaskQueue.js</tspan>
-<tspan x="10" y="682"> 41.  2017-04-17 21:00:49 +0000     4978 bytes  lib/browser/UniqueInstanceStateController.js</tspan>
-<tspan x="10" y="698"> 42.  2017-04-17 21:00:49 +0000      984 bytes  lib/browser/arrayContainsObject.js</tspan>
-<tspan x="10" y="714"> 43.  2017-04-17 21:00:49 +0000     1972 bytes  lib/browser/canBeSerialized.js</tspan>
-<tspan x="10" y="730"> 44.  2017-04-17 21:00:49 +0000     2431 bytes  lib/browser/decode.js</tspan>
-<tspan x="10" y="746"> 45.  2017-04-17 21:00:49 +0000     3078 bytes  lib/browser/encode.js</tspan>
-<tspan x="10" y="762"> 46.  2017-04-17 21:00:49 +0000     2158 bytes  lib/browser/equals.js</tspan>
-<tspan x="10" y="778"> 47.  2017-04-17 21:00:49 +0000      646 bytes  lib/browser/escape.js</tspan>
-<tspan x="10" y="794"> 48.  2017-04-17 21:00:49 +0000      505 bytes  lib/browser/isRevocableSession.js</tspan>
-<tspan x="10" y="810"> 49.  2017-04-17 21:00:49 +0000      955 bytes  lib/browser/parseDate.js</tspan>
-<tspan x="10" y="826"> 50.  2017-04-17 21:00:49 +0000     1111 bytes  lib/browser/unique.js</tspan>
-<tspan x="10" y="842"> 51.  2017-04-17 21:00:49 +0000     3094 bytes  lib/browser/unsavedChildren.js</tspan>
-<tspan x="10" y="858"> 52.  2017-04-17 21:00:49 +0000     2660 bytes  lib/node/Analytics.js</tspan>
-<tspan x="10" y="874"> 53.  2017-04-17 21:00:49 +0000     3382 bytes  lib/node/Cloud.js</tspan>
-<tspan x="10" y="890"> 54.  2017-04-17 21:00:49 +0000     5706 bytes  lib/node/CoreManager.js</tspan>
-<tspan x="10" y="906"> 55.  2017-04-17 21:00:49 +0000      475 bytes  lib/node/EventEmitter.js</tspan>
-<tspan x="10" y="922"> 56.  2017-04-17 21:00:49 +0000     8037 bytes  lib/node/FacebookUtils.js</tspan>
-<tspan x="10" y="938"> 57.  2017-04-17 21:00:49 +0000     1918 bytes  lib/node/InstallationController.js</tspan>
-<tspan x="10" y="954"> 58.  2017-04-17 21:00:49 +0000    17901 bytes  lib/node/LiveQueryClient.js</tspan>
-<tspan x="10" y="970"> 59.  2017-04-17 21:00:49 +0000     5069 bytes  lib/node/LiveQuerySubscription.js</tspan>
-<tspan x="10" y="986"> 60.  2017-04-17 21:00:49 +0000     4514 bytes  lib/node/ObjectStateMutations.js</tspan>
-<tspan x="10" y="1002"> 61.  2017-04-17 21:00:49 +0000     6069 bytes  lib/node/Parse.js</tspan>
-<tspan x="10" y="1018"> 62.  2017-04-17 21:00:49 +0000    12253 bytes  lib/node/ParseACL.js</tspan>
-<tspan x="10" y="1034"> 63.  2017-04-17 21:00:49 +0000     6202 bytes  lib/node/ParseConfig.js</tspan>
-<tspan x="10" y="1050"> 64.  2017-04-17 21:00:49 +0000    11268 bytes  lib/node/ParseError.js</tspan>
-<tspan x="10" y="1066"> 65.  2017-04-17 21:00:49 +0000     8735 bytes  lib/node/ParseFile.js</tspan>
-<tspan x="10" y="1082"> 66.  2017-04-17 21:00:49 +0000     7026 bytes  lib/node/ParseGeoPoint.js</tspan>
-<tspan x="10" y="1098"> 67.  2017-04-17 21:00:49 +0000     4879 bytes  lib/node/ParseHooks.js</tspan>
-<tspan x="10" y="1114"> 68.  2017-04-17 21:00:49 +0000     2302 bytes  lib/node/ParseInstallation.js</tspan>
-<tspan x="10" y="1130"> 69.  2017-04-17 21:00:49 +0000     7577 bytes  lib/node/ParseLiveQuery.js</tspan>
-<tspan x="10" y="1146"> 70.  2017-04-17 21:00:49 +0000    64028 bytes  lib/node/ParseObject.js</tspan>
-<tspan x="10" y="1162"> 71.  2017-04-17 21:00:49 +0000    17344 bytes  lib/node/ParseOp.js</tspan>
-<tspan x="10" y="1178"> 72.  2017-04-17 21:00:49 +0000    22270 bytes  lib/node/ParsePromise.js</tspan>
-<tspan x="10" y="1194"> 73.  2017-04-17 21:00:49 +0000    39028 bytes  lib/node/ParseQuery.js</tspan>
-<tspan x="10" y="1210"> 74.  2017-04-17 21:00:49 +0000     5024 bytes  lib/node/ParseRelation.js</tspan>
-<tspan x="10" y="1226"> 75.  2017-04-17 21:00:49 +0000     6636 bytes  lib/node/ParseRole.js</tspan>
-<tspan x="10" y="1242"> 76.  2017-04-17 21:00:49 +0000     5769 bytes  lib/node/ParseSession.js</tspan>
-<tspan x="10" y="1258"> 77.  2017-04-17 21:00:49 +0000    36424 bytes  lib/node/ParseUser.js</tspan>
-<tspan x="10" y="1274"> 78.  2017-04-17 21:00:49 +0000     2989 bytes  lib/node/Push.js</tspan>
-<tspan x="10" y="1290"> 79.  2017-04-17 21:00:49 +0000     7725 bytes  lib/node/RESTController.js</tspan>
-<tspan x="10" y="1306"> 80.  2017-04-17 21:00:49 +0000     4364 bytes  lib/node/SingleInstanceStateController.js</tspan>
-<tspan x="10" y="1322"> 81.  2017-04-17 21:00:49 +0000     3126 bytes  lib/node/Storage.js</tspan>
-<tspan x="10" y="1338"> 82.  2017-04-17 21:00:49 +0000     1025 bytes  lib/node/StorageController.browser.js</tspan>
-<tspan x="10" y="1354"> 83.  2017-04-17 21:00:49 +0000      901 bytes  lib/node/StorageController.default.js</tspan>
-<tspan x="10" y="1370"> 84.  2017-04-17 21:00:49 +0000     1571 bytes  lib/node/StorageController.react-native.js</tspan>
-<tspan x="10" y="1386"> 85.  2017-04-17 21:00:49 +0000     1986 bytes  lib/node/TaskQueue.js</tspan>
-<tspan x="10" y="1402"> 86.  2017-04-17 21:00:49 +0000     4978 bytes  lib/node/UniqueInstanceStateController.js</tspan>
-<tspan x="10" y="1418"> 87.  2017-04-17 21:00:49 +0000      984 bytes  lib/node/arrayContainsObject.js</tspan>
-<tspan x="10" y="1434"> 88.  2017-04-17 21:00:49 +0000     1972 bytes  lib/node/canBeSerialized.js</tspan>
-<tspan x="10" y="1450"> 89.  2017-04-17 21:00:49 +0000     2431 bytes  lib/node/decode.js</tspan>
-<tspan x="10" y="1466"> 90.  2017-04-17 21:00:49 +0000     3078 bytes  lib/node/encode.js</tspan>
-<tspan x="10" y="1482"> 91.  2017-04-17 21:00:49 +0000     2158 bytes  lib/node/equals.js</tspan>
-<tspan x="10" y="1498"> 92.  2017-04-17 21:00:49 +0000      646 bytes  lib/node/escape.js</tspan>
-<tspan x="10" y="1514"> 93.  2017-04-17 21:00:49 +0000      505 bytes  lib/node/isRevocableSession.js</tspan>
-<tspan x="10" y="1530"> 94.  2017-04-17 21:00:49 +0000      955 bytes  lib/node/parseDate.js</tspan>
-<tspan x="10" y="1546"> 95.  2017-04-17 21:00:49 +0000     1111 bytes  lib/node/unique.js</tspan>
-<tspan x="10" y="1562"> 96.  2017-04-17 21:00:49 +0000     3094 bytes  lib/node/unsavedChildren.js</tspan>
-<tspan x="10" y="1578"> 97.  2017-04-17 21:00:49 +0000     2343 bytes  lib/react-native/Analytics.js</tspan>
-<tspan x="10" y="1594"> 98.  2017-04-17 21:00:49 +0000     2763 bytes  lib/react-native/Cloud.js</tspan>
-<tspan x="10" y="1610"> 99.  2017-04-17 21:00:49 +0000     5381 bytes  lib/react-native/CoreManager.js</tspan>
-<tspan x="10" y="1626">100.  2017-04-17 21:00:49 +0000      544 bytes  lib/react-native/EventEmitter.js</tspan>
-<tspan x="10" y="1642">101.  2017-04-17 21:00:49 +0000     7572 bytes  lib/react-native/FacebookUtils.js</tspan>
-<tspan x="10" y="1658">102.  2017-04-17 21:00:49 +0000     1346 bytes  lib/react-native/InstallationController.js</tspan>
-<tspan x="10" y="1674">103.  2017-04-17 21:00:49 +0000    12399 bytes  lib/react-native/LiveQueryClient.js</tspan>
-<tspan x="10" y="1690">104.  2017-04-17 21:00:49 +0000     3548 bytes  lib/react-native/LiveQuerySubscription.js</tspan>
-<tspan x="10" y="1706">105.  2017-04-17 21:00:49 +0000     3187 bytes  lib/react-native/ObjectStateMutations.js</tspan>
-<tspan x="10" y="1722">106.  2017-04-17 21:00:49 +0000     4443 bytes  lib/react-native/Parse.js</tspan>
-<tspan x="10" y="1738">107.  2017-04-17 21:00:49 +0000    10087 bytes  lib/react-native/ParseACL.js</tspan>
-<tspan x="10" y="1754">108.  2017-04-17 21:00:49 +0000     4382 bytes  lib/react-native/ParseConfig.js</tspan>
-<tspan x="10" y="1770">109.  2017-04-17 21:00:49 +0000    10884 bytes  lib/react-native/ParseError.js</tspan>
-<tspan x="10" y="1786">110.  2017-04-17 21:00:49 +0000     7490 bytes  lib/react-native/ParseFile.js</tspan>
-<tspan x="10" y="1802">111.  2017-04-17 21:00:49 +0000     5593 bytes  lib/react-native/ParseGeoPoint.js</tspan>
-<tspan x="10" y="1818">112.  2017-04-17 21:00:49 +0000     3693 bytes  lib/react-native/ParseHooks.js</tspan>
-<tspan x="10" y="1834">113.  2017-04-17 21:00:49 +0000      707 bytes  lib/react-native/ParseInstallation.js</tspan>
-<tspan x="10" y="1850">114.  2017-04-17 21:00:49 +0000     6624 bytes  lib/react-native/ParseLiveQuery.js</tspan>
-<tspan x="10" y="1866">115.  2017-04-17 21:00:49 +0000    54681 bytes  lib/react-native/ParseObject.js</tspan>
-<tspan x="10" y="1882">116.  2017-04-17 21:00:49 +0000    11532 bytes  lib/react-native/ParseOp.js</tspan>
-<tspan x="10" y="1898">117.  2017-04-17 21:00:49 +0000    17204 bytes  lib/react-native/ParsePromise.js</tspan>
-<tspan x="10" y="1914">118.  2017-04-17 21:00:49 +0000    33139 bytes  lib/react-native/ParseQuery.js</tspan>
-<tspan x="10" y="1930">119.  2017-04-17 21:00:49 +0000     3834 bytes  lib/react-native/ParseRelation.js</tspan>
-<tspan x="10" y="1946">120.  2017-04-17 21:00:49 +0000     4325 bytes  lib/react-native/ParseRole.js</tspan>
-<tspan x="10" y="1962">121.  2017-04-17 21:00:49 +0000     3405 bytes  lib/react-native/ParseSession.js</tspan>
-<tspan x="10" y="1978">122.  2017-04-17 21:00:49 +0000    28925 bytes  lib/react-native/ParseUser.js</tspan>
-<tspan x="10" y="1994">123.  2017-04-17 21:00:49 +0000     2479 bytes  lib/react-native/Push.js</tspan>
-<tspan x="10" y="2010">124.  2017-04-17 21:00:49 +0000     6690 bytes  lib/react-native/RESTController.js</tspan>
-<tspan x="10" y="2026">125.  2017-04-17 21:00:49 +0000     3115 bytes  lib/react-native/SingleInstanceStateController.j\</tspan>
+<tspan x="10" y="26">  0.  2017-04-17 21:01:54 +0000  1624398 bytes  .</tspan>
+<tspan x="10" y="42">  1.  2017-04-17 21:01:54 +0000     1534 bytes  LICENSE</tspan>
+<tspan x="10" y="58">  2.  2017-04-17 21:01:54 +0000     1966 bytes  PATENTS</tspan>
+<tspan x="10" y="74">  3.  2017-04-17 21:01:54 +0000     2825 bytes  README.md</tspan>
+<tspan x="10" y="90">  4.  2017-04-17 21:01:54 +0000   445506 bytes  dist/parse.js</tspan>
+<tspan x="10" y="106">  5.  2017-04-17 21:01:54 +0000   167412 bytes  dist/parse.min.js</tspan>
+<tspan x="10" y="122">  6.  2017-04-17 21:01:54 +0000       52 bytes  index.js</tspan>
+<tspan x="10" y="138">  7.  2017-04-17 21:01:54 +0000     2660 bytes  lib/browser/Analytics.js</tspan>
+<tspan x="10" y="154">  8.  2017-04-17 21:01:54 +0000     3382 bytes  lib/browser/Cloud.js</tspan>
+<tspan x="10" y="170">  9.  2017-04-17 21:01:54 +0000     5706 bytes  lib/browser/CoreManager.js</tspan>
+<tspan x="10" y="186"> 10.  2017-04-17 21:01:54 +0000      475 bytes  lib/browser/EventEmitter.js</tspan>
+<tspan x="10" y="202"> 11.  2017-04-17 21:01:54 +0000     8037 bytes  lib/browser/FacebookUtils.js</tspan>
+<tspan x="10" y="218"> 12.  2017-04-17 21:01:54 +0000     1918 bytes  lib/browser/InstallationController.js</tspan>
+<tspan x="10" y="234"> 13.  2017-04-17 21:01:54 +0000    18038 bytes  lib/browser/LiveQueryClient.js</tspan>
+<tspan x="10" y="250"> 14.  2017-04-17 21:01:54 +0000     5069 bytes  lib/browser/LiveQuerySubscription.js</tspan>
+<tspan x="10" y="266"> 15.  2017-04-17 21:01:54 +0000     4514 bytes  lib/browser/ObjectStateMutations.js</tspan>
+<tspan x="10" y="282"> 16.  2017-04-17 21:01:54 +0000     6098 bytes  lib/browser/Parse.js</tspan>
+<tspan x="10" y="298"> 17.  2017-04-17 21:01:54 +0000    12253 bytes  lib/browser/ParseACL.js</tspan>
+<tspan x="10" y="314"> 18.  2017-04-17 21:01:54 +0000     6202 bytes  lib/browser/ParseConfig.js</tspan>
+<tspan x="10" y="330"> 19.  2017-04-17 21:01:54 +0000    11268 bytes  lib/browser/ParseError.js</tspan>
+<tspan x="10" y="346"> 20.  2017-04-17 21:01:54 +0000     8735 bytes  lib/browser/ParseFile.js</tspan>
+<tspan x="10" y="362"> 21.  2017-04-17 21:01:54 +0000     7026 bytes  lib/browser/ParseGeoPoint.js</tspan>
+<tspan x="10" y="378"> 22.  2017-04-17 21:01:54 +0000     4879 bytes  lib/browser/ParseHooks.js</tspan>
+<tspan x="10" y="394"> 23.  2017-04-17 21:01:54 +0000     2302 bytes  lib/browser/ParseInstallation.js</tspan>
+<tspan x="10" y="410"> 24.  2017-04-17 21:01:54 +0000     7577 bytes  lib/browser/ParseLiveQuery.js</tspan>
+<tspan x="10" y="426"> 25.  2017-04-17 21:01:54 +0000    64028 bytes  lib/browser/ParseObject.js</tspan>
+<tspan x="10" y="442"> 26.  2017-04-17 21:01:54 +0000    17344 bytes  lib/browser/ParseOp.js</tspan>
+<tspan x="10" y="458"> 27.  2017-04-17 21:01:54 +0000    22270 bytes  lib/browser/ParsePromise.js</tspan>
+<tspan x="10" y="474"> 28.  2017-04-17 21:01:54 +0000    39028 bytes  lib/browser/ParseQuery.js</tspan>
+<tspan x="10" y="490"> 29.  2017-04-17 21:01:54 +0000     5024 bytes  lib/browser/ParseRelation.js</tspan>
+<tspan x="10" y="506"> 30.  2017-04-17 21:01:54 +0000     6636 bytes  lib/browser/ParseRole.js</tspan>
+<tspan x="10" y="522"> 31.  2017-04-17 21:01:54 +0000     5769 bytes  lib/browser/ParseSession.js</tspan>
+<tspan x="10" y="538"> 32.  2017-04-17 21:01:54 +0000    36424 bytes  lib/browser/ParseUser.js</tspan>
+<tspan x="10" y="554"> 33.  2017-04-17 21:01:54 +0000     2989 bytes  lib/browser/Push.js</tspan>
+<tspan x="10" y="570"> 34.  2017-04-17 21:01:54 +0000     7676 bytes  lib/browser/RESTController.js</tspan>
+<tspan x="10" y="586"> 35.  2017-04-17 21:01:54 +0000     4364 bytes  lib/browser/SingleInstanceStateController.js</tspan>
+<tspan x="10" y="602"> 36.  2017-04-17 21:01:54 +0000     3126 bytes  lib/browser/Storage.js</tspan>
+<tspan x="10" y="618"> 37.  2017-04-17 21:01:54 +0000     1025 bytes  lib/browser/StorageController.browser.js</tspan>
+<tspan x="10" y="634"> 38.  2017-04-17 21:01:54 +0000      901 bytes  lib/browser/StorageController.default.js</tspan>
+<tspan x="10" y="650"> 39.  2017-04-17 21:01:54 +0000     1571 bytes  lib/browser/StorageController.react-native.js</tspan>
+<tspan x="10" y="666"> 40.  2017-04-17 21:01:54 +0000     1986 bytes  lib/browser/TaskQueue.js</tspan>
+<tspan x="10" y="682"> 41.  2017-04-17 21:01:54 +0000     4978 bytes  lib/browser/UniqueInstanceStateController.js</tspan>
+<tspan x="10" y="698"> 42.  2017-04-17 21:01:54 +0000      984 bytes  lib/browser/arrayContainsObject.js</tspan>
+<tspan x="10" y="714"> 43.  2017-04-17 21:01:54 +0000     1972 bytes  lib/browser/canBeSerialized.js</tspan>
+<tspan x="10" y="730"> 44.  2017-04-17 21:01:54 +0000     2431 bytes  lib/browser/decode.js</tspan>
+<tspan x="10" y="746"> 45.  2017-04-17 21:01:54 +0000     3078 bytes  lib/browser/encode.js</tspan>
+<tspan x="10" y="762"> 46.  2017-04-17 21:01:54 +0000     2158 bytes  lib/browser/equals.js</tspan>
+<tspan x="10" y="778"> 47.  2017-04-17 21:01:54 +0000      646 bytes  lib/browser/escape.js</tspan>
+<tspan x="10" y="794"> 48.  2017-04-17 21:01:54 +0000      505 bytes  lib/browser/isRevocableSession.js</tspan>
+<tspan x="10" y="810"> 49.  2017-04-17 21:01:54 +0000      955 bytes  lib/browser/parseDate.js</tspan>
+<tspan x="10" y="826"> 50.  2017-04-17 21:01:54 +0000     1111 bytes  lib/browser/unique.js</tspan>
+<tspan x="10" y="842"> 51.  2017-04-17 21:01:54 +0000     3094 bytes  lib/browser/unsavedChildren.js</tspan>
+<tspan x="10" y="858"> 52.  2017-04-17 21:01:54 +0000     2660 bytes  lib/node/Analytics.js</tspan>
+<tspan x="10" y="874"> 53.  2017-04-17 21:01:54 +0000     3382 bytes  lib/node/Cloud.js</tspan>
+<tspan x="10" y="890"> 54.  2017-04-17 21:01:54 +0000     5706 bytes  lib/node/CoreManager.js</tspan>
+<tspan x="10" y="906"> 55.  2017-04-17 21:01:54 +0000      475 bytes  lib/node/EventEmitter.js</tspan>
+<tspan x="10" y="922"> 56.  2017-04-17 21:01:54 +0000     8037 bytes  lib/node/FacebookUtils.js</tspan>
+<tspan x="10" y="938"> 57.  2017-04-17 21:01:54 +0000     1918 bytes  lib/node/InstallationController.js</tspan>
+<tspan x="10" y="954"> 58.  2017-04-17 21:01:54 +0000    17901 bytes  lib/node/LiveQueryClient.js</tspan>
+<tspan x="10" y="970"> 59.  2017-04-17 21:01:54 +0000     5069 bytes  lib/node/LiveQuerySubscription.js</tspan>
+<tspan x="10" y="986"> 60.  2017-04-17 21:01:54 +0000     4514 bytes  lib/node/ObjectStateMutations.js</tspan>
+<tspan x="10" y="1002"> 61.  2017-04-17 21:01:54 +0000     6069 bytes  lib/node/Parse.js</tspan>
+<tspan x="10" y="1018"> 62.  2017-04-17 21:01:54 +0000    12253 bytes  lib/node/ParseACL.js</tspan>
+<tspan x="10" y="1034"> 63.  2017-04-17 21:01:54 +0000     6202 bytes  lib/node/ParseConfig.js</tspan>
+<tspan x="10" y="1050"> 64.  2017-04-17 21:01:54 +0000    11268 bytes  lib/node/ParseError.js</tspan>
+<tspan x="10" y="1066"> 65.  2017-04-17 21:01:54 +0000     8735 bytes  lib/node/ParseFile.js</tspan>
+<tspan x="10" y="1082"> 66.  2017-04-17 21:01:54 +0000     7026 bytes  lib/node/ParseGeoPoint.js</tspan>
+<tspan x="10" y="1098"> 67.  2017-04-17 21:01:54 +0000     4879 bytes  lib/node/ParseHooks.js</tspan>
+<tspan x="10" y="1114"> 68.  2017-04-17 21:01:54 +0000     2302 bytes  lib/node/ParseInstallation.js</tspan>
+<tspan x="10" y="1130"> 69.  2017-04-17 21:01:54 +0000     7577 bytes  lib/node/ParseLiveQuery.js</tspan>
+<tspan x="10" y="1146"> 70.  2017-04-17 21:01:54 +0000    64028 bytes  lib/node/ParseObject.js</tspan>
+<tspan x="10" y="1162"> 71.  2017-04-17 21:01:54 +0000    17344 bytes  lib/node/ParseOp.js</tspan>
+<tspan x="10" y="1178"> 72.  2017-04-17 21:01:54 +0000    22270 bytes  lib/node/ParsePromise.js</tspan>
+<tspan x="10" y="1194"> 73.  2017-04-17 21:01:54 +0000    39028 bytes  lib/node/ParseQuery.js</tspan>
+<tspan x="10" y="1210"> 74.  2017-04-17 21:01:54 +0000     5024 bytes  lib/node/ParseRelation.js</tspan>
+<tspan x="10" y="1226"> 75.  2017-04-17 21:01:54 +0000     6636 bytes  lib/node/ParseRole.js</tspan>
+<tspan x="10" y="1242"> 76.  2017-04-17 21:01:54 +0000     5769 bytes  lib/node/ParseSession.js</tspan>
+<tspan x="10" y="1258"> 77.  2017-04-17 21:01:54 +0000    36424 bytes  lib/node/ParseUser.js</tspan>
+<tspan x="10" y="1274"> 78.  2017-04-17 21:01:54 +0000     2989 bytes  lib/node/Push.js</tspan>
+<tspan x="10" y="1290"> 79.  2017-04-17 21:01:54 +0000     7725 bytes  lib/node/RESTController.js</tspan>
+<tspan x="10" y="1306"> 80.  2017-04-17 21:01:54 +0000     4364 bytes  lib/node/SingleInstanceStateController.js</tspan>
+<tspan x="10" y="1322"> 81.  2017-04-17 21:01:54 +0000     3126 bytes  lib/node/Storage.js</tspan>
+<tspan x="10" y="1338"> 82.  2017-04-17 21:01:54 +0000     1025 bytes  lib/node/StorageController.browser.js</tspan>
+<tspan x="10" y="1354"> 83.  2017-04-17 21:01:54 +0000      901 bytes  lib/node/StorageController.default.js</tspan>
+<tspan x="10" y="1370"> 84.  2017-04-17 21:01:54 +0000     1571 bytes  lib/node/StorageController.react-native.js</tspan>
+<tspan x="10" y="1386"> 85.  2017-04-17 21:01:54 +0000     1986 bytes  lib/node/TaskQueue.js</tspan>
+<tspan x="10" y="1402"> 86.  2017-04-17 21:01:54 +0000     4978 bytes  lib/node/UniqueInstanceStateController.js</tspan>
+<tspan x="10" y="1418"> 87.  2017-04-17 21:01:54 +0000      984 bytes  lib/node/arrayContainsObject.js</tspan>
+<tspan x="10" y="1434"> 88.  2017-04-17 21:01:54 +0000     1972 bytes  lib/node/canBeSerialized.js</tspan>
+<tspan x="10" y="1450"> 89.  2017-04-17 21:01:54 +0000     2431 bytes  lib/node/decode.js</tspan>
+<tspan x="10" y="1466"> 90.  2017-04-17 21:01:54 +0000     3078 bytes  lib/node/encode.js</tspan>
+<tspan x="10" y="1482"> 91.  2017-04-17 21:01:54 +0000     2158 bytes  lib/node/equals.js</tspan>
+<tspan x="10" y="1498"> 92.  2017-04-17 21:01:54 +0000      646 bytes  lib/node/escape.js</tspan>
+<tspan x="10" y="1514"> 93.  2017-04-17 21:01:54 +0000      505 bytes  lib/node/isRevocableSession.js</tspan>
+<tspan x="10" y="1530"> 94.  2017-04-17 21:01:54 +0000      955 bytes  lib/node/parseDate.js</tspan>
+<tspan x="10" y="1546"> 95.  2017-04-17 21:01:54 +0000     1111 bytes  lib/node/unique.js</tspan>
+<tspan x="10" y="1562"> 96.  2017-04-17 21:01:54 +0000     3094 bytes  lib/node/unsavedChildren.js</tspan>
+<tspan x="10" y="1578"> 97.  2017-04-17 21:01:54 +0000     2343 bytes  lib/react-native/Analytics.js</tspan>
+<tspan x="10" y="1594"> 98.  2017-04-17 21:01:54 +0000     2763 bytes  lib/react-native/Cloud.js</tspan>
+<tspan x="10" y="1610"> 99.  2017-04-17 21:01:54 +0000     5381 bytes  lib/react-native/CoreManager.js</tspan>
+<tspan x="10" y="1626">100.  2017-04-17 21:01:54 +0000      544 bytes  lib/react-native/EventEmitter.js</tspan>
+<tspan x="10" y="1642">101.  2017-04-17 21:01:54 +0000     7572 bytes  lib/react-native/FacebookUtils.js</tspan>
+<tspan x="10" y="1658">102.  2017-04-17 21:01:54 +0000     1346 bytes  lib/react-native/InstallationController.js</tspan>
+<tspan x="10" y="1674">103.  2017-04-17 21:01:54 +0000    12399 bytes  lib/react-native/LiveQueryClient.js</tspan>
+<tspan x="10" y="1690">104.  2017-04-17 21:01:54 +0000     3548 bytes  lib/react-native/LiveQuerySubscription.js</tspan>
+<tspan x="10" y="1706">105.  2017-04-17 21:01:54 +0000     3187 bytes  lib/react-native/ObjectStateMutations.js</tspan>
+<tspan x="10" y="1722">106.  2017-04-17 21:01:54 +0000     4443 bytes  lib/react-native/Parse.js</tspan>
+<tspan x="10" y="1738">107.  2017-04-17 21:01:54 +0000    10087 bytes  lib/react-native/ParseACL.js</tspan>
+<tspan x="10" y="1754">108.  2017-04-17 21:01:54 +0000     4382 bytes  lib/react-native/ParseConfig.js</tspan>
+<tspan x="10" y="1770">109.  2017-04-17 21:01:54 +0000    10884 bytes  lib/react-native/ParseError.js</tspan>
+<tspan x="10" y="1786">110.  2017-04-17 21:01:54 +0000     7490 bytes  lib/react-native/ParseFile.js</tspan>
+<tspan x="10" y="1802">111.  2017-04-17 21:01:54 +0000     5593 bytes  lib/react-native/ParseGeoPoint.js</tspan>
+<tspan x="10" y="1818">112.  2017-04-17 21:01:54 +0000     3693 bytes  lib/react-native/ParseHooks.js</tspan>
+<tspan x="10" y="1834">113.  2017-04-17 21:01:54 +0000      707 bytes  lib/react-native/ParseInstallation.js</tspan>
+<tspan x="10" y="1850">114.  2017-04-17 21:01:54 +0000     6624 bytes  lib/react-native/ParseLiveQuery.js</tspan>
+<tspan x="10" y="1866">115.  2017-04-17 21:01:54 +0000    54681 bytes  lib/react-native/ParseObject.js</tspan>
+<tspan x="10" y="1882">116.  2017-04-17 21:01:54 +0000    11532 bytes  lib/react-native/ParseOp.js</tspan>
+<tspan x="10" y="1898">117.  2017-04-17 21:01:54 +0000    17204 bytes  lib/react-native/ParsePromise.js</tspan>
+<tspan x="10" y="1914">118.  2017-04-17 21:01:54 +0000    33139 bytes  lib/react-native/ParseQuery.js</tspan>
+<tspan x="10" y="1930">119.  2017-04-17 21:01:54 +0000     3834 bytes  lib/react-native/ParseRelation.js</tspan>
+<tspan x="10" y="1946">120.  2017-04-17 21:01:54 +0000     4325 bytes  lib/react-native/ParseRole.js</tspan>
+<tspan x="10" y="1962">121.  2017-04-17 21:01:54 +0000     3405 bytes  lib/react-native/ParseSession.js</tspan>
+<tspan x="10" y="1978">122.  2017-04-17 21:01:54 +0000    28925 bytes  lib/react-native/ParseUser.js</tspan>
+<tspan x="10" y="1994">123.  2017-04-17 21:01:54 +0000     2479 bytes  lib/react-native/Push.js</tspan>
+<tspan x="10" y="2010">124.  2017-04-17 21:01:54 +0000     6690 bytes  lib/react-native/RESTController.js</tspan>
+<tspan x="10" y="2026">125.  2017-04-17 21:01:54 +0000     3115 bytes  lib/react-native/SingleInstanceStateController.j\</tspan>
 <tspan x="10" y="2042">s</tspan>
-<tspan x="10" y="2058">126.  2017-04-17 21:00:49 +0000     2681 bytes  lib/react-native/Storage.js</tspan>
-<tspan x="10" y="2074">127.  2017-04-17 21:00:49 +0000      779 bytes  lib/react-native/StorageController.browser.js</tspan>
-<tspan x="10" y="2090">128.  2017-04-17 21:00:49 +0000      844 bytes  lib/react-native/StorageController.default.js</tspan>
-<tspan x="10" y="2106">129.  2017-04-17 21:00:49 +0000     1268 bytes  lib/react-native/StorageController.react-native.\</tspan>
+<tspan x="10" y="2058">126.  2017-04-17 21:01:54 +0000     2681 bytes  lib/react-native/Storage.js</tspan>
+<tspan x="10" y="2074">127.  2017-04-17 21:01:54 +0000      779 bytes  lib/react-native/StorageController.browser.js</tspan>
+<tspan x="10" y="2090">128.  2017-04-17 21:01:54 +0000      844 bytes  lib/react-native/StorageController.default.js</tspan>
+<tspan x="10" y="2106">129.  2017-04-17 21:01:54 +0000     1268 bytes  lib/react-native/StorageController.react-native.\</tspan>
 <tspan x="10" y="2122">js</tspan>
-<tspan x="10" y="2138">130.  2017-04-17 21:00:49 +0000     1134 bytes  lib/react-native/TaskQueue.js</tspan>
-<tspan x="10" y="2154">131.  2017-04-17 21:00:49 +0000     3617 bytes  lib/react-native/UniqueInstanceStateController.j\</tspan>
+<tspan x="10" y="2138">130.  2017-04-17 21:01:54 +0000     1134 bytes  lib/react-native/TaskQueue.js</tspan>
+<tspan x="10" y="2154">131.  2017-04-17 21:01:54 +0000     3617 bytes  lib/react-native/UniqueInstanceStateController.j\</tspan>
 <tspan x="10" y="2170">s</tspan>
-<tspan x="10" y="2186">132.  2017-04-17 21:00:49 +0000      690 bytes  lib/react-native/arrayContainsObject.js</tspan>
-<tspan x="10" y="2202">133.  2017-04-17 21:00:49 +0000     1353 bytes  lib/react-native/canBeSerialized.js</tspan>
-<tspan x="10" y="2218">134.  2017-04-17 21:00:49 +0000     1684 bytes  lib/react-native/decode.js</tspan>
-<tspan x="10" y="2234">135.  2017-04-17 21:00:49 +0000     2222 bytes  lib/react-native/encode.js</tspan>
-<tspan x="10" y="2250">136.  2017-04-17 21:00:49 +0000     1273 bytes  lib/react-native/equals.js</tspan>
-<tspan x="10" y="2266">137.  2017-04-17 21:00:49 +0000      555 bytes  lib/react-native/escape.js</tspan>
-<tspan x="10" y="2282">138.  2017-04-17 21:00:49 +0000      402 bytes  lib/react-native/isRevocableSession.js</tspan>
-<tspan x="10" y="2298">139.  2017-04-17 21:00:49 +0000      861 bytes  lib/react-native/parseDate.js</tspan>
-<tspan x="10" y="2314">140.  2017-04-17 21:00:49 +0000      744 bytes  lib/react-native/unique.js</tspan>
-<tspan x="10" y="2330">141.  2017-04-17 21:00:49 +0000     2432 bytes  lib/react-native/unsavedChildren.js</tspan>
-<tspan x="10" y="2346">142.  2017-04-17 21:00:49 +0000       49 bytes  node.js</tspan>
-<tspan x="10" y="2362">143.  2017-04-17 21:00:49 +0000     3836 bytes  package.json</tspan>
-<tspan x="10" y="2378">144.  2017-04-17 21:00:49 +0000       57 bytes  react-native.js</tspan>
+<tspan x="10" y="2186">132.  2017-04-17 21:01:54 +0000      690 bytes  lib/react-native/arrayContainsObject.js</tspan>
+<tspan x="10" y="2202">133.  2017-04-17 21:01:54 +0000     1353 bytes  lib/react-native/canBeSerialized.js</tspan>
+<tspan x="10" y="2218">134.  2017-04-17 21:01:54 +0000     1684 bytes  lib/react-native/decode.js</tspan>
+<tspan x="10" y="2234">135.  2017-04-17 21:01:54 +0000     2222 bytes  lib/react-native/encode.js</tspan>
+<tspan x="10" y="2250">136.  2017-04-17 21:01:54 +0000     1273 bytes  lib/react-native/equals.js</tspan>
+<tspan x="10" y="2266">137.  2017-04-17 21:01:54 +0000      555 bytes  lib/react-native/escape.js</tspan>
+<tspan x="10" y="2282">138.  2017-04-17 21:01:54 +0000      402 bytes  lib/react-native/isRevocableSession.js</tspan>
+<tspan x="10" y="2298">139.  2017-04-17 21:01:54 +0000      861 bytes  lib/react-native/parseDate.js</tspan>
+<tspan x="10" y="2314">140.  2017-04-17 21:01:54 +0000      744 bytes  lib/react-native/unique.js</tspan>
+<tspan x="10" y="2330">141.  2017-04-17 21:01:54 +0000     2432 bytes  lib/react-native/unsavedChildren.js</tspan>
+<tspan x="10" y="2346">142.  2017-04-17 21:01:54 +0000       49 bytes  node.js</tspan>
+<tspan x="10" y="2362">143.  2017-04-17 21:01:54 +0000     3836 bytes  package.json</tspan>
+<tspan x="10" y="2378">144.  2017-04-17 21:01:54 +0000       57 bytes  react-native.js</tspan>
 </text>
 </svg>
