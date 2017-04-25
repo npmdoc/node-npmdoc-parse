@@ -1,4 +1,7 @@
-# api documentation for  [parse (v1.9.2)](https://www.parse.com)  [![npm package](https://img.shields.io/npm/v/npmdoc-parse.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-parse) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-parse.svg)](https://travis-ci.org/npmdoc/node-npmdoc-parse)
+# npmdoc-parse
+
+#### basic api documentation for  [parse (v1.9.2)](https://www.parse.com)  [![npm package](https://img.shields.io/npm/v/npmdoc-parse.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-parse) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-parse.svg)](https://travis-ci.org/npmdoc/node-npmdoc-parse)
+
 #### The Parse JavaScript SDK
 
 [![NPM](https://nodei.co/npm/parse.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/parse)
@@ -120,7 +123,8 @@
         "release": "./build_releases.sh && npm publish",
         "test": "PARSE_BUILD=node jest"
     },
-    "version": "1.9.2"
+    "version": "1.9.2",
+    "bin": {}
 }
 ```
 
