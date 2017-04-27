@@ -281,12 +281,6 @@
 
         <li>
 
-            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">parse.</span>LiveQuery._events</span>
-
-        </li>
-
-        <li>
-
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">parse.</span>LiveQuerySubscription</span>
 
         </li>
@@ -942,19 +936,6 @@
         <li>
 
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">parse.LiveQuery.</span>domain</span>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.parse.LiveQuery._events">module parse.LiveQuery._events</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.parse.LiveQuery._events.error">
-            function <span class="apidocSignatureSpan">parse.LiveQuery._events.</span>error
-            <span class="apidocSignatureSpan">()</span>
-            </a>
 
         </li>
 
@@ -3402,8 +3383,6 @@ parse/node\') instead.');
 
 
 
-
-
 </div>
 
 <div class="apidocSectionDiv">
@@ -4367,14 +4346,6 @@ if (serverUrl[serverUrl.length - 1] !== '/') {
 };
 
 _CoreManager2.default.<span class="apidocCodeKeywordSpan">setPushController</span>(DefaultController);
-},{"./CoreManager":3,"./ParseQuery":21,"babel-runtime/helpers/typeof":61}],27:[function(_dereq_,module
-,exports){
-(function (process){
-'use strict';
-
-var _typeof2 = _dereq_('babel-runtime/helpers/typeof');
-
-var _typeof3 = _interopRequireDefault(_typeof2);
 ...</pre></li>
     </ul>
 
@@ -4470,15 +4441,6 @@ ParseObject":18,"./ParseOp":19,"./ParsePromise":20,"./ParseQuery":21,"./ParseRel
 };
 
 _CoreManager2.default.<span class="apidocCodeKeywordSpan">setSessionController</span>(DefaultController);
-},{"./CoreManager":3,"./ParseObject":18,"./ParsePromise":20,"./ParseUser":25,"./isRevocableSession
-":39,"babel-runtime/core-js/object/get-prototype-of":50,"babel-runtime/helpers/classCallCheck":56,"
-;babel-runtime/helpers/createClass":57,"babel-runtime/helpers/inherits":59,"babel-runtime/helpers/possibleConstructorReturn
-":60,"babel-runtime/helpers/typeof":61}],25:[function(_dereq_,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
 ...</pre></li>
     </ul>
 
@@ -4507,15 +4469,8 @@ Object.defineProperty(exports, "__esModule", {
   }
 };
 
-_CoreManager2.default.<span class="apidocCodeKeywordSpan">setStorageController</span>(_dereq_('./StorageController.browser&amp;#
+_CoreManager2.default.<span class="apidocCodeKeywordSpan">setStorageController</span>(require('./StorageController.browser&amp;#
 x27;));
-},{"./CoreManager":3,"./ParsePromise":20,"./StorageController.browser":30}],30:[function(_dereq_,module
-,exports){
-'use strict';
-
-var _ParsePromise = _dereq_('./ParsePromise');
-
-var _ParsePromise2 = _interopRequireDefault(_ParsePromise);
 ...</pre></li>
     </ul>
 
@@ -4542,17 +4497,6 @@ requestPasswordReset', 'upgradeToRevocableSession', 'linkWith'], controller);
 };
 
 _CoreManager2.default.<span class="apidocCodeKeywordSpan">setUserController</span>(DefaultController);
-},{"./CoreManager":3,"./ParseError":13,"./ParseObject":18,"./ParsePromise":20,"./ParseSession
-":24,"./Storage":29,"./isRevocableSession":39,"babel-runtime/core-js/json/stringify":44,"
-;babel-runtime/core-js/object/define-property":47,"babel-runtime/core-js/object/get-prototype-of":50,"babel-
-runtime/helpers/classCallCheck":56,"babel-runtime/helpers/createClass":57,"babel-runtime/helpers/get":58
-,"babel-runtime/helpers/inherits":59,"babel-runtime/helpers/possibleConstructorReturn":60,"babel-runtime
-/helpers/typeof":61}],26:[function(_dereq_,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
 ...</pre></li>
     </ul>
 
@@ -4872,42 +4816,6 @@ exports.default = LiveQueryClient;
 
 
 
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.parse.LiveQuery._events" id="apidoc.module.parse.LiveQuery._events">module parse.LiveQuery._events</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.parse.LiveQuery._events.error" id="apidoc.element.parse.LiveQuery._events.error">
-        function <span class="apidocSignatureSpan">parse.LiveQuery._events.</span>error
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">error = function () {}</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-    var request = RESTController.request('POST', 'functions/' + name, payload, requestOptions);
-
-    return request.then(function (res) {
-      var decoded = (0, _decode2.default)(res);
-      if (decoded &amp;&amp; decoded.hasOwnProperty('result')) {
-        return _ParsePromise2.default.as(decoded.result);
-      }
-      return _ParsePromise2.default.<span class="apidocCodeKeywordSpan">error</span>(new _ParseError2.default(_ParseError2.default
-.INVALID_JSON, 'The server returned an invalid response.'));
-    })._thenRunCallbacks(options);
-  }
-};
-
-_CoreManager2.default.setCloudController(DefaultController);
-},{"./CoreManager":3,"./ParseError":13,"./ParsePromise":20,"./decode":35,"./encode&amp;#
-x22;:36}],3:[function(_dereq_,module,exports){
-(function (process){
-...</pre></li>
-    </ul>
 
 
 </div>
@@ -6488,23 +6396,21 @@ x22;:36}],3:[function(_dereq_,module,exports){
   return _CoreManager2.default.getHooksController().create(hook);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-_dereq_('../modules/es6.map');
-_dereq_('../modules/es7.map.to-json');
-module.exports = _dereq_('../modules/_core').Map;
-},{"../modules/_core":90,"../modules/es6.map":152,"../modules/es6.object.to-string":160,"../modules
-/es6.string.iterator":161,"../modules/es7.map.to-json":164,"../modules/web.dom.iterable":167}],65:[function
-(_dereq_,module,exports){
-_dereq_('../../modules/es6.object.create');
-var $Object = _dereq_('../../modules/_core').Object;
-module.exports = function create(P, D){
-  return $Object.<span class="apidocCodeKeywordSpan">create</span>(P, D);
-};
-},{"../../modules/_core":90,"../../modules/es6.object.create":153}],66:[function(_dereq_,module,exports){
-_dereq_('../../modules/es6.object.define-property');
-var $Object = _dereq_('../../modules/_core').Object;
-module.exports = function defineProperty(it, key, desc){
-  return $Object.defineProperty(it, key, desc);
-};
+}
+
+function createTrigger(className, triggerName, url) {
+  return create({ className: className, triggerName: triggerName, url: url });
+}
+
+function create(hook) {
+  return _CoreManager2.default.getHooksController().<span class="apidocCodeKeywordSpan">create</span>(hook);
+}
+
+function updateFunction(functionName, url) {
+  return update({ functionName: functionName, url: url });
+}
+
+function updateTrigger(className, triggerName, url) {
 ...</pre></li>
     </ul>
 
@@ -8525,21 +8431,21 @@ currentInstallationId: function () {
   return controller.removeItem(path);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  return _ParsePromise2.default.as(controller.setItem(path, value));
-},
-removeItem: function (path) {
-  var controller = _CoreManager2.default.getStorageController();
-  if (controller.async === 1) {
-    throw new Error('Synchronous storage is not supported by the current storage controller');
+try {
+  localStorage.setItem(path, value);
+} catch (e) {
+  // Quota exceeded, possibly due to Safari Private Browsing mode
+}
+  },
+  removeItem: function (path) {
+localStorage.<span class="apidocCodeKeywordSpan">removeItem</span>(path);
+  },
+  clear: function () {
+localStorage.clear();
   }
-  return controller.<span class="apidocCodeKeywordSpan">removeItem</span>(path);
-},
-removeItemAsync: function (path) {
-  var controller = _CoreManager2.default.getStorageController();
-  if (controller.async === 1) {
-    return controller.removeItemAsync(path);
-  }
-  return _ParsePromise2.default.as(controller.removeItem(path));
+}; /**
+* Copyright (c) 2015-present, Parse, LLC.
+* All rights reserved.
 ...</pre></li>
     </ul>
 
@@ -8595,21 +8501,21 @@ setCurrentUser: function (user) {
   return controller.setItem(path, value);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  return _ParsePromise2.default.as(controller.getItem(path));
+async: 0,
+
+getItem: function (path) {
+  return localStorage.getItem(path);
 },
 setItem: function (path, value) {
-  var controller = _CoreManager2.default.getStorageController();
-  if (controller.async === 1) {
-    throw new Error('Synchronous storage is not supported by the current storage controller');
+  try {
+    localStorage.<span class="apidocCodeKeywordSpan">setItem</span>(path, value);
+  } catch (e) {
+    // Quota exceeded, possibly due to Safari Private Browsing mode
   }
-  return controller.<span class="apidocCodeKeywordSpan">setItem</span>(path, value);
 },
-setItemAsync: function (path, value) {
-  var controller = _CoreManager2.default.getStorageController();
-  if (controller.async === 1) {
-    return controller.setItemAsync(path, value);
-  }
-  return _ParsePromise2.default.as(controller.setItem(path, value));
+removeItem: function (path) {
+  localStorage.removeItem(path);
+},
 ...</pre></li>
     </ul>
 
@@ -8666,22 +8572,21 @@ return _Storage2.default.getItemAsync(path).then(function (iid) {
   localStorage.clear();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-      path = path.substr(1);
-    }
-    return 'Parse/' + _CoreManager2.default.get('APPLICATION_ID') + '/' + path;
+  // Quota exceeded, possibly due to Safari Private Browsing mode
+}
   },
-  _clear: function () {
-    var controller = _CoreManager2.default.getStorageController();
-    if (controller.hasOwnProperty('clear')) {
-      controller.<span class="apidocCodeKeywordSpan">clear</span>();
-    }
+  removeItem: function (path) {
+localStorage.removeItem(path);
+  },
+  clear: function () {
+localStorage.<span class="apidocCodeKeywordSpan">clear</span>();
   }
-};
-
-_CoreManager2.default.setStorageController(_dereq_('./StorageController.browser'));
-},{"./CoreManager":3,"./ParsePromise":20,"./StorageController.browser":30}],30:[function(_dereq_,module
-,exports){
-'use strict';
+}; /**
+* Copyright (c) 2015-present, Parse, LLC.
+* All rights reserved.
+*
+* This source code is licensed under the BSD-style license found in the
+* LICENSE file in the root directory of this source tree. An additional grant
 ...</pre></li>
     </ul>
 
@@ -8729,21 +8634,21 @@ if (configData) {
   localStorage.removeItem(path);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  return _ParsePromise2.default.as(controller.setItem(path, value));
-},
-removeItem: function (path) {
-  var controller = _CoreManager2.default.getStorageController();
-  if (controller.async === 1) {
-    throw new Error('Synchronous storage is not supported by the current storage controller');
+try {
+  localStorage.setItem(path, value);
+} catch (e) {
+  // Quota exceeded, possibly due to Safari Private Browsing mode
+}
+  },
+  removeItem: function (path) {
+localStorage.<span class="apidocCodeKeywordSpan">removeItem</span>(path);
+  },
+  clear: function () {
+localStorage.clear();
   }
-  return controller.<span class="apidocCodeKeywordSpan">removeItem</span>(path);
-},
-removeItemAsync: function (path) {
-  var controller = _CoreManager2.default.getStorageController();
-  if (controller.async === 1) {
-    return controller.removeItemAsync(path);
-  }
-  return _ParsePromise2.default.as(controller.removeItem(path));
+}; /**
+* Copyright (c) 2015-present, Parse, LLC.
+* All rights reserved.
 ...</pre></li>
     </ul>
 
@@ -8764,21 +8669,21 @@ removeItemAsync: function (path) {
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  return _ParsePromise2.default.as(controller.getItem(path));
+async: 0,
+
+getItem: function (path) {
+  return localStorage.getItem(path);
 },
 setItem: function (path, value) {
-  var controller = _CoreManager2.default.getStorageController();
-  if (controller.async === 1) {
-    throw new Error('Synchronous storage is not supported by the current storage controller');
+  try {
+    localStorage.<span class="apidocCodeKeywordSpan">setItem</span>(path, value);
+  } catch (e) {
+    // Quota exceeded, possibly due to Safari Private Browsing mode
   }
-  return controller.<span class="apidocCodeKeywordSpan">setItem</span>(path, value);
 },
-setItemAsync: function (path, value) {
-  var controller = _CoreManager2.default.getStorageController();
-  if (controller.async === 1) {
-    return controller.setItemAsync(path, value);
-  }
-  return _ParsePromise2.default.as(controller.setItem(path, value));
+removeItem: function (path) {
+  localStorage.removeItem(path);
+},
 ...</pre></li>
     </ul>
 
@@ -8806,22 +8711,21 @@ setItemAsync: function (path, value) {
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-      path = path.substr(1);
-    }
-    return 'Parse/' + _CoreManager2.default.get('APPLICATION_ID') + '/' + path;
+  // Quota exceeded, possibly due to Safari Private Browsing mode
+}
   },
-  _clear: function () {
-    var controller = _CoreManager2.default.getStorageController();
-    if (controller.hasOwnProperty('clear')) {
-      controller.<span class="apidocCodeKeywordSpan">clear</span>();
-    }
+  removeItem: function (path) {
+localStorage.removeItem(path);
+  },
+  clear: function () {
+localStorage.<span class="apidocCodeKeywordSpan">clear</span>();
   }
-};
-
-_CoreManager2.default.setStorageController(_dereq_('./StorageController.browser'));
-},{"./CoreManager":3,"./ParsePromise":20,"./StorageController.browser":30}],30:[function(_dereq_,module
-,exports){
-'use strict';
+}; /**
+* Copyright (c) 2015-present, Parse, LLC.
+* All rights reserved.
+*
+* This source code is licensed under the BSD-style license found in the
+* LICENSE file in the root directory of this source tree. An additional grant
 ...</pre></li>
     </ul>
 
@@ -8872,21 +8776,21 @@ if (configData) {
   delete memMap[path];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  return _ParsePromise2.default.as(controller.setItem(path, value));
-},
-removeItem: function (path) {
-  var controller = _CoreManager2.default.getStorageController();
-  if (controller.async === 1) {
-    throw new Error('Synchronous storage is not supported by the current storage controller');
+try {
+  localStorage.setItem(path, value);
+} catch (e) {
+  // Quota exceeded, possibly due to Safari Private Browsing mode
+}
+  },
+  removeItem: function (path) {
+localStorage.<span class="apidocCodeKeywordSpan">removeItem</span>(path);
+  },
+  clear: function () {
+localStorage.clear();
   }
-  return controller.<span class="apidocCodeKeywordSpan">removeItem</span>(path);
-},
-removeItemAsync: function (path) {
-  var controller = _CoreManager2.default.getStorageController();
-  if (controller.async === 1) {
-    return controller.removeItemAsync(path);
-  }
-  return _ParsePromise2.default.as(controller.removeItem(path));
+}; /**
+* Copyright (c) 2015-present, Parse, LLC.
+* All rights reserved.
 ...</pre></li>
     </ul>
 
@@ -8903,21 +8807,21 @@ removeItemAsync: function (path) {
   memMap[path] = String(value);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  return _ParsePromise2.default.as(controller.getItem(path));
+async: 0,
+
+getItem: function (path) {
+  return localStorage.getItem(path);
 },
 setItem: function (path, value) {
-  var controller = _CoreManager2.default.getStorageController();
-  if (controller.async === 1) {
-    throw new Error('Synchronous storage is not supported by the current storage controller');
+  try {
+    localStorage.<span class="apidocCodeKeywordSpan">setItem</span>(path, value);
+  } catch (e) {
+    // Quota exceeded, possibly due to Safari Private Browsing mode
   }
-  return controller.<span class="apidocCodeKeywordSpan">setItem</span>(path, value);
 },
-setItemAsync: function (path, value) {
-  var controller = _CoreManager2.default.getStorageController();
-  if (controller.async === 1) {
-    return controller.setItemAsync(path, value);
-  }
-  return _ParsePromise2.default.as(controller.setItem(path, value));
+removeItem: function (path) {
+  localStorage.removeItem(path);
+},
 ...</pre></li>
     </ul>
 
